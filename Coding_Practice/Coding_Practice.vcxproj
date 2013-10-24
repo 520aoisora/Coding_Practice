@@ -70,6 +70,7 @@
     <ClInclude Include="Chapter1Question4.h" />
     <ClInclude Include="Chapter1Question5.h" />
     <ClInclude Include="Chapter1Question6.h" />
+    <ClInclude Include="Chapter1Question7.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter1Question1.cpp" />
@@ -78,6 +79,7 @@
     <ClCompile Include="Chapter1Question4.cpp" />
     <ClCompile Include="Chapter1Question5.cpp" />
     <ClCompile Include="Chapter1Question6.cpp" />
+    <ClCompile Include="Chapter1Question7.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
