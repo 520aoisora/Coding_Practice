@@ -13,54 +13,60 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Chapter1">
+      <UniqueIdentifier>{9a8e7cc5-c984-4c39-96b3-c8976bdd3eef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter1">
+      <UniqueIdentifier>{a4f16bc5-46b8-4af8-887f-675cfe9198c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chapter1Question1.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
     <ClInclude Include="Chapter1Question2.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
     <ClInclude Include="Chapter1Question3.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
     <ClInclude Include="Chapter1Question4.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
     <ClInclude Include="Chapter1Question5.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
     <ClInclude Include="Chapter1Question6.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
     <ClInclude Include="Chapter1Question7.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter1Question1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter1Question2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Chapter1Question3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Chapter1Question4.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Chapter1Question7.cpp">
+      <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
     <ClCompile Include="Chapter1Question5.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
     <ClCompile Include="Chapter1Question6.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter1Question7.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Chapter1Question4.cpp">
+      <Filter>Source Files\Chapter1</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter1Question3.cpp">
+      <Filter>Source Files\Chapter1</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter1Question2.cpp">
+      <Filter>Source Files\Chapter1</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter1Question1.cpp">
+      <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
