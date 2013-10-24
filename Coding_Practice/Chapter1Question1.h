@@ -1,13 +1,16 @@
 #ifndef _CHAPTER1_QUESTION1_H_
 #define _CHAPTER1_QUESTION1_H_
 
+#include "ClassTemplete.h"
 #include <string>
 
-namespace C1Q1
+class C1Q1 : public ClassTemplete
 {
-	bool allUniqueCharacters(std::string iStr);
+	public:
 
-	void run();
-}
+		bool areAllUniqueCharacters(std::string iStr);
+
+		void runRegression();
+};
 
 #endif

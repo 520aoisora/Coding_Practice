@@ -71,6 +71,7 @@
     <ClInclude Include="Chapter1Question5.h" />
     <ClInclude Include="Chapter1Question6.h" />
     <ClInclude Include="Chapter1Question7.h" />
+    <ClInclude Include="ClassTemplete.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter1Question1.cpp" />
