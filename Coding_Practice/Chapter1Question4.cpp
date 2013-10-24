@@ -4,70 +4,67 @@
 
 using namespace std;
 
-namespace C1Q4
+bool C1Q4::replaceSpace(string& str, int realLength)
 {
-	bool replaceSpace(string& str, int realLength)
+	if(realLength <= 0)
+		return false;
+
+	int spaceCounter = 0;
+	for(int i = 0; i < realLength; i++)
 	{
-		if(realLength <= 0)
-			return false;
+		if(str[i] == ' ')
+			spaceCounter++;
+	}
 
-		int spaceCounter = 0;
-		for(int i = 0; i < realLength; i++)
-		{
-			if(str[i] == ' ')
-				spaceCounter++;
-		}
-
-		if(spaceCounter == 0)
-			return true;
-
-		int newLength = realLength + 2 * spaceCounter;
-		int writeBeginAt = newLength - 1;
-
-		for(int i = realLength - 1; i >= 0; i--)
-		{
-			if(str[i] != ' ')
-				str[writeBeginAt--] = str[i];
-			else
-			{
-				str[writeBeginAt--] = '0';
-				str[writeBeginAt--] = '2';
-				str[writeBeginAt--] = '%';
-			}
-		}
-
+	if(spaceCounter == 0)
 		return true;
-	}
 
-	void run()
+	int newLength = realLength + 2 * spaceCounter;
+	int writeBeginAt = newLength - 1;
+
+	for(int i = realLength - 1; i >= 0; i--)
 	{
-		string str[3];
-		str[0] = "abcdefgh";
-		str[1] = " bcdefgh  ";
-		str[2] = "ab defgh  ";
-
-		int realLength[3];
-		realLength[0] = 8;
-		realLength[1] = 8;
-		realLength[2] = 8;
-
-		string resultStr[3];
-		resultStr[0] = "abcdefgh";
-		resultStr[1] = "%20bcdefgh";
-		resultStr[2] = "ab%20defgh";
-
-
-		for(int i = 0; i < 3; i++)
+		if(str[i] != ' ')
+			str[writeBeginAt--] = str[i];
+		else
 		{
-			cout << "Test " << i << ": ";
-			if(replaceSpace(str[i], realLength[i]) && (str[i].compare(resultStr[i]) == 0))
-				cout << "OK";
-			else
-				cout << "Fail";
-
-			cout << "." << endl;
+			str[writeBeginAt--] = '0';
+			str[writeBeginAt--] = '2';
+			str[writeBeginAt--] = '%';
 		}
-
-		return;
 	}
+
+	return true;
+}
+
+void C1Q4::runRegression()
+{
+	string str[3];
+	str[0] = "abcdefgh";
+	str[1] = " bcdefgh  ";
+	str[2] = "ab defgh  ";
+
+	int realLength[3];
+	realLength[0] = 8;
+	realLength[1] = 8;
+	realLength[2] = 8;
+
+	string resultStr[3];
+	resultStr[0] = "abcdefgh";
+	resultStr[1] = "%20bcdefgh";
+	resultStr[2] = "ab%20defgh";
+
+
+	for(int i = 0; i < 3; i++)
+	{
+		cout << "Test " << i << ": ";
+		if(replaceSpace(str[i], realLength[i]) && (str[i].compare(resultStr[i]) == 0))
+			cout << "OK";
+		else
+			cout << "Fail";
+
+		cout << "." << endl;
+	}
+
+	return;
 }

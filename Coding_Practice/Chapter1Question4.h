@@ -1,13 +1,19 @@
 #ifndef _CHAPTER1_QUESTION4_H_
 #define _CHAPTER1_QUESTION4_H_
 
+#include "ClassTemplete.h"
 #include <string>
 
-namespace C1Q4
+class C1Q4 : public ClassTemplete
 {
-	bool replaceSpace(std::string& str, int realLength);
 
-	void run();
-}
+public:
+
+	void runRegression();
+
+private:
+
+	bool replaceSpace(std::string& str, int realLength);
+};
 
 #endif
