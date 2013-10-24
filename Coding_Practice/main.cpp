@@ -5,10 +5,11 @@
 #include "Chapter1Question3.h"
 #include "Chapter1Question4.h"
 #include "Chapter1Question5.h"
+#include "Chapter1Question6.h"
 
 int main()
 {
-	C1Q5::run();
+	C1Q6::run();
 
 	return 0;
 }
