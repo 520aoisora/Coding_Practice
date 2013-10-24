@@ -1,13 +1,17 @@
 #ifndef _CHAPTER1_QUESTION2_H_
 #define _CHAPTER1_QUESTION2_H_
 
-namespace C1Q2
+#include "ClassTemplete.h"
+
+class C1Q2 : public ClassTemplete
 {
-	void swap(char *begin, char *end);
+	public:
 
-	void reverse(char *str);
+		void swap(char *begin, char *end);
 
-	void run();
-}
+		void reverse(char *str);
+
+		void runRegression();
+};
 
 #endif
