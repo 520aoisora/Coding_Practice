@@ -5,13 +5,16 @@
 
 class C1Q2 : public ClassTemplete
 {
-	public:
 
-		void swap(char *begin, char *end);
+public:
 
-		void reverse(char *str);
+	void runRegression();
 
-		void runRegression();
+private:
+
+	void swap(char *begin, char *end);
+
+	void reverse(char *str);
 };
 
 #endif

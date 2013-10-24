@@ -6,11 +6,14 @@
 
 class C1Q1 : public ClassTemplete
 {
-	public:
 
-		bool areAllUniqueCharacters(std::string iStr);
+public:
+		
+	void runRegression();
 
-		void runRegression();
+private:
+
+	bool areAllUniqueCharacters(std::string iStr);
 };
 
 #endif
