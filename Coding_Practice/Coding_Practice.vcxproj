@@ -66,10 +66,12 @@
   <ItemGroup>
     <ClInclude Include="Chapter1Question1.h" />
     <ClInclude Include="Chapter1Question2.h" />
+    <ClInclude Include="Chapter1Question3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Chapter1Question1.cpp" />
     <ClCompile Include="Chapter1Question2.cpp" />
+    <ClCompile Include="Chapter1Question3.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
