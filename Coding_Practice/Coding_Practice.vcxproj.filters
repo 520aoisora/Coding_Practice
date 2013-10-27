@@ -21,54 +21,54 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Chapter1Question1.h">
+    <ClInclude Include="src\Chapter1\Chapter1Question1.h">
       <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
-    <ClInclude Include="Chapter1Question2.h">
+    <ClInclude Include="src\Chapter1\Chapter1Question2.h">
       <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
-    <ClInclude Include="Chapter1Question3.h">
+    <ClInclude Include="src\Chapter1\Chapter1Question3.h">
       <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
-    <ClInclude Include="Chapter1Question4.h">
+    <ClInclude Include="src\Chapter1\Chapter1Question4.h">
       <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
-    <ClInclude Include="Chapter1Question5.h">
+    <ClInclude Include="src\Chapter1\Chapter1Question5.h">
       <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
-    <ClInclude Include="Chapter1Question6.h">
+    <ClInclude Include="src\Chapter1\Chapter1Question6.h">
       <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
-    <ClInclude Include="Chapter1Question7.h">
+    <ClInclude Include="src\Chapter1\Chapter1Question7.h">
       <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
-    <ClInclude Include="ClassTemplete.h">
+    <ClInclude Include="src\ClassTemplete.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Chapter1Question7.cpp">
+    <ClCompile Include="src\Chapter1\Chapter1Question1.cpp">
       <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter1Question5.cpp">
+    <ClCompile Include="src\Chapter1\Chapter1Question2.cpp">
       <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter1Question6.cpp">
+    <ClCompile Include="src\Chapter1\Chapter1Question3.cpp">
       <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter1Question4.cpp">
+    <ClCompile Include="src\Chapter1\Chapter1Question4.cpp">
       <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter1Question3.cpp">
+    <ClCompile Include="src\Chapter1\Chapter1Question5.cpp">
       <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter1Question2.cpp">
+    <ClCompile Include="src\Chapter1\Chapter1Question6.cpp">
       <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
-    <ClCompile Include="Chapter1Question1.cpp">
+    <ClCompile Include="src\Chapter1\Chapter1Question7.cpp">
+      <Filter>Source Files\Chapter1</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files\Chapter1</Filter>
     </ClCompile>
   </ItemGroup>

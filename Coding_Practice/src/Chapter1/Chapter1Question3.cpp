@@ -1,7 +1,15 @@
-#include <iostream>
-#include <algorithm>
-
+// 1. Preferred location
 #include "Chapter1Question3.h"
+
+// 2. C system files
+
+// 3. C++ system files
+#include <algorithm>
+#include <iostream>
+
+// 4. Other libraries' .h files
+
+// 5. Your project's .h files
 
 using namespace std;
 
