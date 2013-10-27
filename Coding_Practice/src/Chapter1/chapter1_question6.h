@@ -10,7 +10,7 @@
 // 4. Other libraries' .h files
 
 // 5. Your project's .h files
-#include "../ClassTemplete.h"
+#include "../class_templete.h"
 
 class C1Q6 : public ClassTemplete
 {

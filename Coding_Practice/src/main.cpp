@@ -1,12 +1,12 @@
 #include <iostream>
 
-#include "Chapter1/Chapter1Question1.h"
-#include "Chapter1/Chapter1Question2.h"
-#include "Chapter1/Chapter1Question3.h"
-#include "Chapter1/Chapter1Question4.h"
-#include "Chapter1/Chapter1Question5.h"
-#include "Chapter1/Chapter1Question6.h"
-#include "Chapter1/Chapter1Question7.h"
+#include "Chapter1/chapter1_question1.h"
+#include "Chapter1/chapter1_question2.h"
+#include "Chapter1/chapter1_question3.h"
+#include "Chapter1/chapter1_question4.h"
+#include "Chapter1/chapter1_question5.h"
+#include "Chapter1/chapter1_question6.h"
+#include "Chapter1/chapter1_question7.h"
 
 int main()
 {

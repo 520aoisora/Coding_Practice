@@ -1,5 +1,5 @@
 // 1. Preferred location
-#include "Chapter1Question6.h"
+#include "chapter1_question6.h"
 
 // 2. C system files
 

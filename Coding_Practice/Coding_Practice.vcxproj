@@ -64,23 +64,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Chapter1\Chapter1Question1.h" />
-    <ClInclude Include="src\Chapter1\Chapter1Question2.h" />
-    <ClInclude Include="src\Chapter1\Chapter1Question3.h" />
-    <ClInclude Include="src\Chapter1\Chapter1Question4.h" />
-    <ClInclude Include="src\Chapter1\Chapter1Question5.h" />
-    <ClInclude Include="src\Chapter1\Chapter1Question6.h" />
-    <ClInclude Include="src\Chapter1\Chapter1Question7.h" />
-    <ClInclude Include="src\ClassTemplete.h" />
+    <ClInclude Include="src\Chapter1\chapter1_question1.h" />
+    <ClInclude Include="src\Chapter1\chapter1_question2.h" />
+    <ClInclude Include="src\Chapter1\chapter1_question3.h" />
+    <ClInclude Include="src\Chapter1\chapter1_question4.h" />
+    <ClInclude Include="src\Chapter1\chapter1_question5.h" />
+    <ClInclude Include="src\Chapter1\chapter1_question6.h" />
+    <ClInclude Include="src\Chapter1\chapter1_question7.h" />
+    <ClInclude Include="src\class_templete.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Chapter1\Chapter1Question1.cpp" />
-    <ClCompile Include="src\Chapter1\Chapter1Question2.cpp" />
-    <ClCompile Include="src\Chapter1\Chapter1Question3.cpp" />
-    <ClCompile Include="src\Chapter1\Chapter1Question4.cpp" />
-    <ClCompile Include="src\Chapter1\Chapter1Question5.cpp" />
-    <ClCompile Include="src\Chapter1\Chapter1Question6.cpp" />
-    <ClCompile Include="src\Chapter1\Chapter1Question7.cpp" />
+    <ClCompile Include="src\Chapter1\chapter1_question1.cpp" />
+    <ClCompile Include="src\Chapter1\chapter1_question2.cpp" />
+    <ClCompile Include="src\Chapter1\chapter1_question3.cpp" />
+    <ClCompile Include="src\Chapter1\chapter1_question4.cpp" />
+    <ClCompile Include="src\Chapter1\chapter1_question5.cpp" />
+    <ClCompile Include="src\Chapter1\chapter1_question6.cpp" />
+    <ClCompile Include="src\Chapter1\chapter1_question7.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
