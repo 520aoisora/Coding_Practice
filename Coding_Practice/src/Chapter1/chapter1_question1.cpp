@@ -1,3 +1,15 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Question description: Implement an algorithm to determine if a string has all unique characters.
+//						  What if you cannot use additional data structure.
+//
+//		File description: This file declares class C1Q1 with member function areAllUniqueCharacters
+//						  to check if all characters in a string are unique.
+//
+//			  Change log: Person		Date		Comment
+//						  Yi Ji			27/10/2013	Initial version. Only best solution is available.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // 1. Preferred location
 #include "chapter1_question1.h"
 
@@ -12,7 +24,7 @@
 
 using namespace std;
 
-bool C1Q1::areAllUniqueCharacters(string iStr)
+bool C1Q1::areAllUniqueCharacters(const string &iStr)
 {
 	int len = iStr.size();
 	if(len == 0)
