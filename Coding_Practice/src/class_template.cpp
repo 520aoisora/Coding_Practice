@@ -1,5 +1,5 @@
 // 1. Preferred location
-#include "class_Template.h"
+#include "class_template.h"
 
 // 2. C system files
 
@@ -30,7 +30,8 @@ ClassTemplate *ClassTemplate::CreateQuestionPointerOrNull(istream &iQuestionName
 {
 	QuestionName entered_question_name;
 	iQuestionName >> entered_question_name;
-	auto questionName_questionPointer_map_iterator = get_questionName_questionPointer_map().find(entered_question_name);
+	map<QuestionName, ClassTemplate *>::iterator questionName_questionPointer_map_iterator =
+		get_questionName_questionPointer_map().find(entered_question_name);
 
 	if (questionName_questionPointer_map_iterator == get_questionName_questionPointer_map().end())
 	{
