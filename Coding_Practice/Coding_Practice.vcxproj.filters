@@ -42,7 +42,7 @@
     <ClInclude Include="src\Chapter1\chapter1_question7.h">
       <Filter>Header Files\Chapter1</Filter>
     </ClInclude>
-    <ClInclude Include="src\class_templete.h">
+    <ClInclude Include="src\class_template.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -70,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="src\Chapter1\chapter1_question7.cpp">
       <Filter>Source Files\Chapter1</Filter>
+    </ClCompile>
+    <ClCompile Include="src\class_template.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

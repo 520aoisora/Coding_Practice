@@ -20,14 +20,22 @@
 // 4. Other libraries' .h files
 
 // 5. Your project's .h files
-#include "../class_templete.h"
+#include "../class_template.h"
 
-class C1Q1 : public ClassTemplete
+class C1Q1 : public ClassTemplate
 {
 
 public:
-		
-	void runRegression();
+
+	C1Q1(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
+
+	void RunRegression();
+
+private:
+
+	static QuestionName question_name_;
+
+	static C1Q1 question_instance_;
 
 private:
 

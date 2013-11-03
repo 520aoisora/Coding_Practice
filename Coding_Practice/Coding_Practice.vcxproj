@@ -71,7 +71,7 @@
     <ClInclude Include="src\Chapter1\chapter1_question5.h" />
     <ClInclude Include="src\Chapter1\chapter1_question6.h" />
     <ClInclude Include="src\Chapter1\chapter1_question7.h" />
-    <ClInclude Include="src\class_templete.h" />
+    <ClInclude Include="src\class_template.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Chapter1\chapter1_question1.cpp" />
@@ -81,6 +81,7 @@
     <ClCompile Include="src\Chapter1\chapter1_question5.cpp" />
     <ClCompile Include="src\Chapter1\chapter1_question6.cpp" />
     <ClCompile Include="src\Chapter1\chapter1_question7.cpp" />
+    <ClCompile Include="src\class_template.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

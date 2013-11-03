@@ -10,9 +10,9 @@
 // 4. Other libraries' .h files
 
 // 5. Your project's .h files
-#include "../class_templete.h"
+#include "../class_template.h"
 
-class C1Q7 : ClassTemplete
+class C1Q7 : ClassTemplate
 {
 
 public:

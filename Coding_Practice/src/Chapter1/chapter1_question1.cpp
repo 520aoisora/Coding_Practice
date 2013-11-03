@@ -5,9 +5,6 @@
 //		File description: This file declares class C1Q1 with member function areAllUniqueCharacters
 //						  to check if all characters in a string are unique.
 //
-//			  Change log: Person		Date		Comment
-//						  Yi Ji			27/10/2013	Initial version. Only best solution is available.
-//
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // 1. Preferred location
@@ -23,6 +20,37 @@
 // 5. Your project's .h files
 
 using namespace std;
+
+QuestionName C1Q1::question_name_ = "C1Q1";
+
+C1Q1 C1Q1::question_instance_(C1Q1::question_name_);
+
+void C1Q1::RunRegression()
+{
+	string str[10];
+	str[0] = "";
+	str[1] = "abc123";
+	str[2] = "aab123";
+	str[3] = ",.abc123";
+	str[4] = ",abc123,";
+	str[5] = ",a c1 3";
+	str[6] = "12345678901234567890";
+	str[7] = "12345678901234567890";
+	str[8] = "12345678901234567890";
+	str[9] = "12345678901234567890";
+
+	for (int i = 0; i < 10; i++)
+	{
+		cout << "All characters in string: " << str[i] << "are ";
+
+		if (!areAllUniqueCharacters(str[i]))
+			cout << "not ";
+
+		cout << "unique." << endl;
+	}
+
+	return;
+}
 
 bool C1Q1::areAllUniqueCharacters(const string &iStr)
 {
@@ -46,29 +74,3 @@ bool C1Q1::areAllUniqueCharacters(const string &iStr)
 	return true;
 }
 
-void C1Q1::runRegression()
-{
-	string str[10];
-	str[0] = "";
-	str[1] = "abc123";
-	str[2] = "aab123";
-	str[3] = ",.abc123";
-	str[4] = ",abc123,";
-	str[5] = ",a c1 3";
-	str[6] = "12345678901234567890";
-	str[7] = "12345678901234567890";
-	str[8] = "12345678901234567890";
-	str[9] = "12345678901234567890";
-
-	for(int i = 0; i < 10; i++)
-	{
-		cout << "All characters in string: " << str[i] << "are ";
-
-		if(!areAllUniqueCharacters(str[i]))
-			cout << "not ";
-
-		cout << "unique." << endl;
-	}
-	
-	return;
-}
