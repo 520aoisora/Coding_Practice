@@ -20,12 +20,18 @@ class ClassTemplate
 {
 
 public:
-	
+
+	ClassTemplate() {};
+
 	ClassTemplate(QuestionName iQuestionName);
 
 	static ClassTemplate *CreateQuestionPointerOrNull(std::istream &iQuestionName);
 
 	virtual void RunRegression() = 0;
+
+protected:
+
+	virtual ClassTemplate *CreateSpecificQuestionPointer() = 0;
 
 private:
 

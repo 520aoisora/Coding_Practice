@@ -27,6 +27,7 @@ int main()
 		{
 			question_pointer->RunRegression();
 		}
+		delete question_pointer;
 
 		string user_choice = "";
 		cout << "Do you want to continue testing (Y/N): ";

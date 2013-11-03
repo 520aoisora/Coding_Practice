@@ -25,6 +25,11 @@ QuestionName C1Q1::question_name_ = "C1Q1";
 
 C1Q1 C1Q1::question_instance_(C1Q1::question_name_);
 
+ClassTemplate *C1Q1::CreateSpecificQuestionPointer()
+{
+	return new C1Q1();
+}
+
 void C1Q1::RunRegression()
 {
 	string str[10];

@@ -27,9 +27,15 @@ class C1Q1 : public ClassTemplate
 
 public:
 
+	C1Q1() : ClassTemplate() {};
+
 	C1Q1(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
 
 	void RunRegression();
+
+protected:
+
+	ClassTemplate *CreateSpecificQuestionPointer();
 
 private:
 
