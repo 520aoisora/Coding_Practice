@@ -1,2 +1,8 @@
+SRCS=$(wildcard Chapter1/*.cpp)
+
 all:
-	g++ main.cpp class_template.cpp
+	g++ -o main main.cpp class_template.cpp $(SRCS)
+
+clean:
+	rm main
+
