@@ -53,10 +53,10 @@ private:
 			This algorithm depends on the assumption that all characters in
 			the string are ASCII codes.
 
-			Map each charactor to corresponding ASCII code and check array.
-			If corresponding index element is 0, set to 1.
-			If corresponding index element is 1, return true.
-			If go through all characters, return false;
+			Create an array of boolean values, where the flag at index i
+			indicates whether character i in the alphabet is contained in
+			the string. If run across a character a second time, immediately
+			return false.
 
 			Time efficiency: O(N)
 			Space efficiency: O(N)

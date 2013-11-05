@@ -59,20 +59,20 @@ void C1Q1::RunRegression()
 
 bool C1Q1::areAllUniqueCharacters(const string &iStr)
 {
-	int len = iStr.size();
-	if(len == 0)
+	unsigned int len = iStr.size();
+	if(len == 0 || len > 256)
 		return false;
 
-	int characterSet[300];
-	for(int i = 0; i < len; i++)
+	bool characterSet[256] = { false };
+	for(unsigned int i = 0; i < len; i++)
 	{
-		if(characterSet[(int)iStr[i]] == 1)
+		if(characterSet[iStr[i]] == true)
 		{
 			return false;
 		}
 		else
 		{
-			characterSet[(int)iStr[i]] = 1;
+			characterSet[iStr[i]] = true;
 		}
 	}
 
