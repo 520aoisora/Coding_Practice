@@ -34,32 +34,30 @@ void C1Q2::RunRegression()
 {
 	char str[] = "hello";
 
-	char *str1 = str;
+	reverseCharStarString(str);
 
-	reverse(str1);
-
-	cout << str1 << endl;
+	cout << str << endl;
 
 	return;
 }
 
-void C1Q2::swap(char *begin, char *end)
+void C1Q2::swapTwoCharacters(char *ioLeftChar, char *ioRightChar)
 {
-	char tmp = *begin;
-	*begin = *end;
-	*end = tmp;
+	char temp_char = *ioLeftChar;
+	*ioLeftChar = *ioRightChar;
+	*ioRightChar = temp_char;
 }
 
-void C1Q2::reverse(char *str)
+void C1Q2::reverseCharStarString(char *ioStr)
 {
-	char *begin = str;
-	char *end = str;
+	char *begin = ioStr;
+	char *end = ioStr;
 
 	while(*end != NULL)
 		end++;
 	end--;
 
 	for(; begin < end; begin++, end--)
-		swap(begin, end);
+		swapTwoCharacters(begin, end);
 }
 
