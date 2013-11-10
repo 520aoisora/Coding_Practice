@@ -2,7 +2,7 @@
 //	Question description: Implement a function void reverse(char* str) in C++ which reverses a
 //						  null-terminated string.
 //
-//		File description: This file declares class C1Q2 with member function reverse(char *str)
+//		File description: This file declares class C1Q2 with member function reverseCharStarString(char *str)
 //						  to reverse a null-terminated string.
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
