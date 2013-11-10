@@ -13,6 +13,7 @@
 // 2. C system files
 
 // 3. C++ system files
+#include <algorithm>
 #include <iostream>
 #include <stdlib.h>     /* qsort */
 
@@ -123,20 +124,28 @@ int compare(const void *a, const void *b)
 	return (*(char*)a - *(char*)b);
 }
 
-bool C1Q1::areAllUniqueCharacters_withQuickSort(const std::string &iStr)
+bool C1Q1::areAllUniqueCharacters_withQuickSort(string iStr)
 {
 	unsigned int len = iStr.size();
 	if (len == 0 || len > 256)
 		return false;
 
-	const char *const_char_array = iStr.c_str();
-	char *char_array = const_cast<char *> (const_char_array);
+	// Using qsort(). Slower than sort()
+	//const char *const_char_array = iStr.c_str();
+	//char *char_array = const_cast<char *> (const_char_array);
 
-	qsort(char_array, len, sizeof(char), compare);
+	//qsort(char_array, len, sizeof(char), compare);
+
+	//bool are_all_unique_characters = true;
+	//for (unsigned int index = 0; index < len - 1; index++)
+	//	if (*(char_array + index) == *(char_array + index + 1))
+	//		are_all_unique_characters = false;
+
+	sort(iStr.begin(), iStr.end());
 
 	bool are_all_unique_characters = true;
 	for (unsigned int index = 0; index < len - 1; index++)
-		if (*(char_array + index) == *(char_array + index + 1))
+		if (iStr[index] == iStr[index+1])
 			are_all_unique_characters = false;
 
 	if (are_all_unique_characters)

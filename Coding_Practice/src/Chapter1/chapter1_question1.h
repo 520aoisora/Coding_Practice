@@ -117,7 +117,7 @@ private:
 		@ Usage:
 		bool are_all_characters_unique = areAllUniqueCharacters_withQuickSort("ABC");
 	*/
-	bool areAllUniqueCharacters_withQuickSort(const std::string &iStr);
+	bool areAllUniqueCharacters_withQuickSort(std::string iStr);
 };
 
 #endif
