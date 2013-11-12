@@ -47,6 +47,29 @@ private:
 
 private:
 
+	/*
+		@ Description:
+		Replace all spaces in the string with %20.
+
+		@ Algorithm:
+		Get space count and calculate total space required.
+		Iteritor string backwards and start writing from last position.
+
+		Time efficiency: O(N)
+		Space efficiency: O(1)
+
+		@ Input:
+		ioStr: Input string including enough extra space at the end.
+		iRealStringLength: length of real content in the string.
+
+		@ Output:
+		bool: Return true if string is valid.
+		ioStr: String with all spaces replaced with %20.
+
+		@ Usage:
+		string test_string = "Hello world  ."
+		if(replaceAllSpaces(test_string,11);
+	*/
 	bool replaceAllSpaces(std::string &ioStr, const int &iRealStringLength);
 };
 

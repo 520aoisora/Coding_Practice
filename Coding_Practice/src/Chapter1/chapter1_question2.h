@@ -66,7 +66,7 @@ private:
 		iStr: Input string including letters, digits and punctuation.
 
 		@ Output:
-		No return value. iStr will be reverted.
+		No return value. ioStr will be reverted.
 
 		@ Usage:
 		char test_string[] = "Hello world!";
