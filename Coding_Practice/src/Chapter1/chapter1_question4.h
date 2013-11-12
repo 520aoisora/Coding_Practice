@@ -1,3 +1,14 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Question description: Write a method to replace all spaces in a string with '%20'.
+//						  You may assume that the string has sufficient space at the end of the
+//						  string to hold the additional characters, and that you are given the
+//						  "true" length of the string.
+//
+//		File description: This file declares class C1Q4 with member function replaceAllSpaces
+//						  to replace all spaces in a string with '%20'.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 #ifndef CODING_PRACTICE_CHAPTER1_QUESTION4_H_
 #define CODING_PRACTICE_CHAPTER1_QUESTION4_H_
 
@@ -18,11 +29,25 @@ class C1Q4 : public ClassTemplate
 
 public:
 
-	void runRegression();
+	C1Q4() : ClassTemplate() {};
+
+	C1Q4(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
+
+	void RunRegression();
+
+protected:
+
+	ClassTemplate *CreateSpecificQuestionPointer();
 
 private:
 
-	bool replaceSpace(std::string& str, int realLength);
+	static QuestionName question_name_;
+
+	static C1Q4 question_instance_;
+
+private:
+
+	bool replaceAllSpaces(std::string &ioStr, const int &iRealStringLength);
 };
 
 #endif

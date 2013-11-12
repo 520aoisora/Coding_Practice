@@ -1,3 +1,12 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Question description: Given two strings, write a method to decide if one is a permutation
+//						  of the other.
+//
+//		File description: This file declares class C1Q3 with member function isPermutation
+//						  to check if string1 is a permutation of string2.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // 1. Preferred location
 #include "chapter1_question3.h"
 

@@ -1,3 +1,14 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Question description: Write a method to replace all spaces in a string with '%20'.
+//						  You may assume that the string has sufficient space at the end of the
+//						  string to hold the additional characters, and that you are given the
+//						  "true" length of the string.
+//
+//		File description: This file declares class C1Q4 with member function replaceAllSpaces
+//						  to replace all spaces in a string with '%20'.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // 1. Preferred location
 #include "chapter1_question4.h"
 
@@ -12,40 +23,47 @@
 
 using namespace std;
 
-bool C1Q4::replaceSpace(string& str, int realLength)
+QuestionName C1Q4::question_name_ = "C1Q4";
+
+C1Q4 C1Q4::question_instance_(C1Q4::question_name_);
+
+ClassTemplate *C1Q4::CreateSpecificQuestionPointer()
 {
-	if(realLength <= 0)
+	return new C1Q4();
+}
+
+bool C1Q4::replaceAllSpaces(string &ioStr, const int &iRealStringLength)
+{
+	if (iRealStringLength <= 0)
 		return false;
 
-	int spaceCounter = 0;
-	for(int i = 0; i < realLength; i++)
-	{
-		if(str[i] == ' ')
-			spaceCounter++;
-	}
+	int space_counter = 0;
+	for (int index = 0; index < iRealStringLength; index++)
+		if (ioStr[index] == ' ')
+			space_counter++;
 
-	if(spaceCounter == 0)
+	if (space_counter == 0)
 		return true;
 
-	int newLength = realLength + 2 * spaceCounter;
-	int writeBeginAt = newLength - 1;
+	int new_string_length = iRealStringLength + 2 * space_counter;
+	int index_of_writing = new_string_length - 1;
 
-	for(int i = realLength - 1; i >= 0; i--)
+	for (int index = iRealStringLength - 1; index >= 0; index--)
 	{
-		if(str[i] != ' ')
-			str[writeBeginAt--] = str[i];
+		if (ioStr[index] != ' ')
+			ioStr[index_of_writing--] = ioStr[index];
 		else
 		{
-			str[writeBeginAt--] = '0';
-			str[writeBeginAt--] = '2';
-			str[writeBeginAt--] = '%';
+			ioStr[index_of_writing--] = '0';
+			ioStr[index_of_writing--] = '2';
+			ioStr[index_of_writing--] = '%';
 		}
 	}
 
 	return true;
 }
 
-void C1Q4::runRegression()
+void C1Q4::RunRegression()
 {
 	string str[3];
 	str[0] = "abcdefgh";
@@ -66,7 +84,7 @@ void C1Q4::runRegression()
 	for(int i = 0; i < 3; i++)
 	{
 		cout << "Test " << i << ": ";
-		if(replaceSpace(str[i], realLength[i]) && (str[i].compare(resultStr[i]) == 0))
+		if (replaceAllSpaces(str[i], realLength[i]) && (str[i].compare(resultStr[i]) == 0))
 			cout << "OK";
 		else
 			cout << "Fail";
