@@ -1,3 +1,15 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Question description: Implement a method to perform basic string compression using the counts of
+//						  repeated characters. For example, the string aabcccccaaa would become
+//						  a2b1c5a3. If the "compressed" string would not become smaller than the
+//						  original string, your method should return the original string.
+//
+//		File description: This file declares class C1Q5 with member function compressString
+//						  to compress a string and return the shorter one between the original string
+//						  and new compressed string.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // 1. Preferred location
 #include "chapter1_question5.h"
 
@@ -8,54 +20,62 @@
 #include <sstream>
 
 // 4. Other libraries' .h files
-//#include <boost/lexical_cast.hpp>
 
 // 5. Your project's .h files
 
 using namespace std;
 
-void C1Q5::append(std::string& newStr, char lastChar, int count)
-{
-	stringstream ss1;
-	ss1 << lastChar;
-	newStr.append(ss1.str());
+QuestionName C1Q5::question_name_ = "C1Q5";
 
-	stringstream ss2;
-	ss2 << count;
-	newStr.append(ss2.str());
+C1Q5 C1Q5::question_instance_(C1Q5::question_name_);
+
+ClassTemplate *C1Q5::CreateSpecificQuestionPointer()
+{
+	return new C1Q5();
 }
 
-bool C1Q5::compressString(string& str)
+void C1Q5::appendCharToStringEnd(std::string& ioStr, const char &lastChar, const int &charCount)
 {
-	unsigned int size = str.size();
-	if(size == 0)
+	stringstream ss_last_char;
+	ss_last_char << lastChar;
+	ioStr.append(ss_last_char.str());
+
+	stringstream ss_char_count;
+	ss_char_count << charCount;
+	ioStr.append(ss_char_count.str());
+}
+
+bool C1Q5::compressString(string& ioStr)
+{
+	unsigned int str_length = ioStr.size();
+	if (str_length == 0)
 		return false;
 
-	char lastChar = str[0];
-	int count = 0;
-	string newStr = "";
+	char last_char = ioStr[0];
+	int char_count = 0;
+	string new_str = "";
 
-	for(unsigned int i = 0; i < size; i++)
+	for (unsigned int i = 0; i < str_length; i++)
 	{
-		if(str[i] != lastChar)
+		if (ioStr[i] != last_char)
 		{
-			append(newStr, lastChar, count);
-			lastChar = str[i];
-			count = 1;
+			appendCharToStringEnd(new_str, last_char, char_count);
+			last_char = ioStr[i];
+			char_count = 1;
 		}
 		else
-			count++;
+			char_count++;
 	}
 
-	append(newStr, lastChar, count);
+	appendCharToStringEnd(new_str, last_char, char_count);
 
-	if(newStr.size() < size)
-		str = newStr;
+	if (new_str.size() < str_length)
+		ioStr = new_str;
 
 	return true;
 }
 
-void C1Q5::runRegression()
+void C1Q5::RunRegression()
 {
 	string str[3];
 	str[0] = "abcdefgh";
