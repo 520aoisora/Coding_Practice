@@ -1,3 +1,12 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//	Question description: Write an algorithm such that if an element in an MxN matrix is 0,
+//						  its entire row and column are set to 0.
+//
+//		File description: This file declares class C1Q7 with member function setZeros to set whole
+//						  row and column zero where there is a zero in a 6 x 7 matrix.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // 1. Preferred location
 #include "chapter1_question7.h"
 
@@ -12,104 +21,116 @@
 
 using namespace std;
 
-bool C1Q7::areEqualArray3(int matrix1[3][3], int matrix2[3][3])
+QuestionName C1Q7::question_name_ = "C1Q7";
+
+C1Q7 C1Q7::question_instance_(C1Q7::question_name_);
+
+ClassTemplate *C1Q7::CreateSpecificQuestionPointer()
 {
-	for(int i = 0; i < 3; i++)
-		for(int j = 0; j < 3; j++)
-			if(matrix1[i][j] != matrix2[i][j])
+	return new C1Q7();
+}
+
+bool C1Q7::areTwoMatricesIdentical(const int matrix1[6][7], const int matrix2[6][7]) const
+{
+	for(int row = 0; row < 3; row++)
+		for(int column = 0; column < 3; column++)
+			if(matrix1[row][column] != matrix2[row][column])
 				return false;
 
 	return true;
 }
 
-void C1Q7::repaintArray(int matrix[3][3])
+void C1Q7::setZeros(int ioMatrix[6][7]) const
 {
-	int rows[3], columns[3];
-	fill_n(rows, 3, 1);
-	fill_n(columns, 3, 1);
+	bool zero_value_rows[6] = { false };
+	bool zero_value_columns[7] = { false };
 
-	for(int row = 0; row < 3; row++)
+	for(int row = 0; row < 6; row++)
 	{
-		for(int column = 0; column < 3; column++)
+		for(int column = 0; column < 7; column++)
 		{
-			if(matrix[row][column] == 0)
+			if (ioMatrix[row][column] == 0)
 			{
-				rows[row] = 0;
-				columns[column] = 0;
+				zero_value_rows[row] = true;
+				zero_value_columns[column] = true;
 			}
 		}
 	}
 
-	for(int row = 0; row < 3; row++)
-		if(rows[row] == 0)
-			for(int column = 0; column < 3; column++)
-				matrix[row][column] = 0;
-
-	for(int column = 0; column < 3; column++)
-		if(columns[column] == 0)
-			for(int row = 0; row < 3; row++)
-				matrix[row][column] = 0;
+	for (int row = 0; row < 6; row++)
+		for (int column = 0; column < 7; column++)
+			if (zero_value_rows[row] || zero_value_columns[column])
+				ioMatrix[row][column] = 0;
 }
 
-void C1Q7::runRegression()
+void C1Q7::RunRegression()
 {
-	//int test[2][2][2];
+	//int matrix[4][3][3] = {{{1,1,1},
+	//						{1,1,1},
+	//						{1,1,1}},
 
-	//int test1[2][2] = {{1,2},{3,4}};
-	//int test2[2][2] = {{5,6},{7,8}};
+	//						{{0,1,1},
+	//						{1,1,1},
+	//						{1,1,1}},
 
-	//memcpy(test[0], test1, 16);
-	//memcpy(test[1], test2, 16);
+	//						{{1,1,1},
+	//						{1,0,1},
+	//						{1,1,1}},
 
-	//for(int i = 0; i < 2; i++)
-	//	for(int j = 0; j < 2; j++)
-	//		for(int k = 0; k < 2; k++)
-	//			cout << test[i][j][k];
-	//cout << endl;
+	//						{{1,1,1},
+	//						{1,1,0},
+	//						{1,0,1}}};
 
-	int matrix[4][3][3] = {{{1,1,1},
-							{1,1,1},
-							{1,1,1}},
+	//int resultMatrix[4][3][3] = {{{1,1,1},
+	//								{1,1,1},
+	//								{1,1,1}},
 
-							{{0,1,1},
-							{1,1,1},
-							{1,1,1}},
+	//								{{0,0,0},
+	//								{0,1,1},
+	//								{0,1,1}},
 
-							{{1,1,1},
-							{1,0,1},
-							{1,1,1}},
+	//								{{1,0,1},
+	//								{0,0,0},
+	//								{1,0,1}},
 
-							{{1,1,1},
-							{1,1,0},
-							{1,0,1}}};
+	//								{{1,0,0},
+	//								{0,0,0},
+	//								{0,0,0}}};
 
-	int resultMatrix[4][3][3] = {{{1,1,1},
-									{1,1,1},
-									{1,1,1}},
+	//for(int i = 0; i < 4; i++)
+	//{
+	//	repaintArray(matrix[i]);
 
-									{{0,0,0},
-									{0,1,1},
-									{0,1,1}},
+	//	cout << "Test " << i << ": ";
+	//	if(areEqualArray3(matrix[i], resultMatrix[i]))
+	//		cout << "OK";
+	//	else
+	//		cout << "Fail";
 
-									{{1,0,1},
-									{0,0,0},
-									{1,0,1}},
+	//	cout << "." << endl;
+	//}
 
-									{{1,0,0},
-									{0,0,0},
-									{0,0,0}}};
+	int original_6x7_matrix[6][7] = { { 1, 1, 1, 1, 1, 1, 1 },
+									  { 1, 1, 1, 1, 1, 1, 1 },
+									  { 1, 0, 1, 1, 1, 1, 1 },
+									  { 1, 1, 1, 1, 1, 1, 1 },
+									  { 1, 1, 1, 1, 1, 0, 1 },
+									  { 1, 1, 1, 1, 1, 1, 1 } };
 
-	for(int i = 0; i < 4; i++)
-	{
-		repaintArray(matrix[i]);
+	int repainted_6x7_matrix[6][7] = {  { 1, 0, 1, 1, 1, 0, 1 },
+										{ 1, 0, 1, 1, 1, 0, 1 },
+										{ 0, 0, 0, 0, 0, 0, 0 },
+										{ 1, 0, 1, 1, 1, 0, 1 },
+										{ 0, 0, 0, 0, 0, 0, 0 },
+										{ 1, 0, 1, 1, 1, 0, 1 } };
 
-		cout << "Test " << i << ": ";
-		if(areEqualArray3(matrix[i], resultMatrix[i]))
-			cout << "OK";
-		else
-			cout << "Fail";
+	setZeros(original_6x7_matrix);
 
-		cout << "." << endl;
-	}
-	return;
+	cout << "Test 1: ";
+	if (areTwoMatricesIdentical(original_6x7_matrix, repainted_6x7_matrix))
+		cout << "OK";
+	else
+		cout << "Fail";
+
+	cout << "." << endl;
 }
