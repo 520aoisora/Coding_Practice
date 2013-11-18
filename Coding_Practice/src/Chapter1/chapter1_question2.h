@@ -30,11 +30,11 @@ public:
 
 	C1Q2(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
 
-	void RunRegression();
+	void RunRegression() const;
 
 protected:
 
-	ClassTemplate *CreateSpecificQuestionPointer();
+	ClassTemplate *CreateSpecificQuestionPointer() const;
 
 private:
 
@@ -44,7 +44,7 @@ private:
 
 private:
 
-	void swapTwoCharacters(char *ioLeftChar, char *ioRightChar);
+	void swapTwoCharacters(char *ioLeftChar, char *ioRightChar) const;
 
 	/*
 		@ Description:
@@ -72,7 +72,7 @@ private:
 		char test_string[] = "Hello world!";
 		reverseCharStarString(test_string);
 	*/
-	void reverseCharStarString(char *ioStr);
+	void reverseCharStarString(char *ioStr) const;
 };
 
 #endif

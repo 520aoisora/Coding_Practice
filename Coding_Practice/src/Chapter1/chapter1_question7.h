@@ -30,11 +30,11 @@ public:
 
 	C1Q7(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
 
-	void RunRegression();
+	void RunRegression() const;
 
 protected:
 
-	ClassTemplate *CreateSpecificQuestionPointer();
+	ClassTemplate *CreateSpecificQuestionPointer() const;
 
 private:
 

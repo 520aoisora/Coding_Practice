@@ -29,12 +29,12 @@ QuestionName C1Q5::question_name_ = "C1Q5";
 
 C1Q5 C1Q5::question_instance_(C1Q5::question_name_);
 
-ClassTemplate *C1Q5::CreateSpecificQuestionPointer()
+ClassTemplate *C1Q5::CreateSpecificQuestionPointer() const
 {
 	return new C1Q5();
 }
 
-void C1Q5::appendCharToStringEnd(std::string& ioStr, const char &lastChar, const int &charCount)
+void C1Q5::appendCharToStringEnd(std::string &ioStr, const char &lastChar, const int &charCount) const
 {
 	stringstream ss_last_char;
 	ss_last_char << lastChar;
@@ -45,7 +45,7 @@ void C1Q5::appendCharToStringEnd(std::string& ioStr, const char &lastChar, const
 	ioStr.append(ss_char_count.str());
 }
 
-bool C1Q5::compressString(string& ioStr)
+bool C1Q5::compressString(string &ioStr) const
 {
 	unsigned int str_length = ioStr.size();
 	if (str_length == 0)
@@ -75,7 +75,7 @@ bool C1Q5::compressString(string& ioStr)
 	return true;
 }
 
-void C1Q5::RunRegression()
+void C1Q5::RunRegression() const
 {
 	string str[3];
 	str[0] = "abcdefgh";

@@ -27,12 +27,12 @@ QuestionName C1Q1::question_name_ = "C1Q1";
 
 C1Q1 C1Q1::question_instance_(C1Q1::question_name_);
 
-ClassTemplate *C1Q1::CreateSpecificQuestionPointer()
+ClassTemplate *C1Q1::CreateSpecificQuestionPointer() const
 {
 	return new C1Q1();
 }
 
-void C1Q1::RunRegression()
+void C1Q1::RunRegression() const
 {
 	string str[10];
 	str[0] = "";
@@ -79,7 +79,7 @@ void C1Q1::RunRegression()
 	return;
 }
 
-bool C1Q1::areAllUniqueCharacters(const string &iStr)
+bool C1Q1::areAllUniqueCharacters(const string &iStr) const
 {
 	unsigned int len = iStr.size();
 	if(len == 0 || len > 256)
@@ -97,7 +97,7 @@ bool C1Q1::areAllUniqueCharacters(const string &iStr)
 	return true;
 }
 
-bool C1Q1::areAllUniqueCharacters_doubleForLoop(const string &iStr)
+bool C1Q1::areAllUniqueCharacters_doubleForLoop(const string &iStr) const
 {
 	unsigned int len = iStr.size();
 	if (len == 0 || len > 256)
@@ -124,7 +124,7 @@ int compare(const void *a, const void *b)
 	return (*(char*)a - *(char*)b);
 }
 
-bool C1Q1::areAllUniqueCharacters_withQuickSort(string iStr)
+bool C1Q1::areAllUniqueCharacters_withQuickSort(string iStr) const
 {
 	unsigned int len = iStr.size();
 	if (len == 0 || len > 256)

@@ -31,11 +31,11 @@ public:
 
 	C1Q1(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
 
-	void RunRegression();
+	void RunRegression() const;
 
 protected:
 
-	ClassTemplate *CreateSpecificQuestionPointer();
+	ClassTemplate *CreateSpecificQuestionPointer() const;
 
 private:
 
@@ -71,7 +71,7 @@ private:
 		@ Usage:
 			bool are_all_characters_unique = areAllUniqueCharacters("ABC");
 	*/
-	bool areAllUniqueCharacters(const std::string &iStr);
+	bool areAllUniqueCharacters(const std::string &iStr) const;
 
 	/*
 		@ Description:
@@ -94,7 +94,7 @@ private:
 		@ Usage:
 		bool are_all_characters_unique = areAllUniqueCharacters_doubleForLoop("ABC");
 	*/
-	bool areAllUniqueCharacters_doubleForLoop(const std::string &iStr);
+	bool areAllUniqueCharacters_doubleForLoop(const std::string &iStr) const;
 
 	/*
 		@ Description:
@@ -117,7 +117,7 @@ private:
 		@ Usage:
 		bool are_all_characters_unique = areAllUniqueCharacters_withQuickSort("ABC");
 	*/
-	bool areAllUniqueCharacters_withQuickSort(std::string iStr);
+	bool areAllUniqueCharacters_withQuickSort(std::string iStr) const;
 };
 
 #endif

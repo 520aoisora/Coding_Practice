@@ -34,11 +34,11 @@ public:
 
 	C1Q5(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
 
-	void RunRegression();
+	void RunRegression() const;
 
 protected:
 
-	ClassTemplate *CreateSpecificQuestionPointer();
+	ClassTemplate *CreateSpecificQuestionPointer() const;
 
 private:
 
@@ -48,7 +48,7 @@ private:
 
 private:
 
-	void appendCharToStringEnd(std::string &ioStr, const char &lastChar, const int &charCount);
+	void appendCharToStringEnd(std::string &ioStr, const char &lastChar, const int &charCount) const;
 
 	/*
 		@ Description:
@@ -72,7 +72,7 @@ private:
 		string test_string = "aabcccccaaa";
 		if(compressString(test_string));
 	*/
-	bool compressString(std::string &ioStr);
+	bool compressString(std::string &ioStr) const;
 };
 
 #endif

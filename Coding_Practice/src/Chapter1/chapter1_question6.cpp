@@ -25,12 +25,12 @@ QuestionName C1Q6::question_name_ = "C1Q6";
 
 C1Q6 C1Q6::question_instance_(C1Q6::question_name_);
 
-ClassTemplate *C1Q6::CreateSpecificQuestionPointer()
+ClassTemplate *C1Q6::CreateSpecificQuestionPointer() const
 {
 	return new C1Q6();
 }
 
-bool C1Q6::areTwo5x5ArrayEqual(int matrix1[5][5], int matrix2[5][5])
+bool C1Q6::areTwo5x5ArrayEqual(int matrix1[5][5], int matrix2[5][5]) const
 {
 	for (int row = 0; row < 4; row++)
 		for (int column = 0; column < 4; column++)
@@ -40,7 +40,7 @@ bool C1Q6::areTwo5x5ArrayEqual(int matrix1[5][5], int matrix2[5][5])
 	return true;
 }
 
-void C1Q6::rotate5x5Matrix(int ioMatrix[5][5], int N)
+void C1Q6::rotate5x5Matrix(int ioMatrix[5][5], int N) const
 {
 	for (int row = 0; row <= N / 2 - 1; row++)
 	{
@@ -55,7 +55,7 @@ void C1Q6::rotate5x5Matrix(int ioMatrix[5][5], int N)
 	}
 }
 
-void C1Q6::RunRegression()
+void C1Q6::RunRegression() const
 {
 	int original_5x5_martix[5][5] = {{ 1, 2, 3, 4, 5 },
 									{ 6, 7, 8, 9, 10 },

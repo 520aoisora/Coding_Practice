@@ -33,11 +33,11 @@ public:
 
 	C1Q4(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
 
-	void RunRegression();
+	void RunRegression() const;
 
 protected:
 
-	ClassTemplate *CreateSpecificQuestionPointer();
+	ClassTemplate *CreateSpecificQuestionPointer() const;
 
 private:
 
@@ -70,7 +70,7 @@ private:
 		string test_string = "Hello world  ."
 		if(replaceAllSpaces(test_string,11);
 	*/
-	bool replaceAllSpaces(std::string &ioStr, const int &iRealStringLength);
+	bool replaceAllSpaces(std::string &ioStr, const int &iRealStringLength) const;
 };
 
 #endif

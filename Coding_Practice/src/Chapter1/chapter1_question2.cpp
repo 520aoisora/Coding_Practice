@@ -25,12 +25,12 @@ QuestionName C1Q2::question_name_ = "C1Q2";
 
 C1Q2 C1Q2::question_instance_(C1Q2::question_name_);
 
-ClassTemplate *C1Q2::CreateSpecificQuestionPointer()
+ClassTemplate *C1Q2::CreateSpecificQuestionPointer() const
 {
 	return new C1Q2();
 }
 
-void C1Q2::RunRegression()
+void C1Q2::RunRegression() const
 {
 	char str[] = "hello";
 
@@ -41,14 +41,14 @@ void C1Q2::RunRegression()
 	return;
 }
 
-void C1Q2::swapTwoCharacters(char *ioLeftChar, char *ioRightChar)
+void C1Q2::swapTwoCharacters(char *ioLeftChar, char *ioRightChar) const
 {
 	char temp_char = *ioLeftChar;
 	*ioLeftChar = *ioRightChar;
 	*ioRightChar = temp_char;
 }
 
-void C1Q2::reverseCharStarString(char *ioStr)
+void C1Q2::reverseCharStarString(char *ioStr) const
 {
 	char *begin = ioStr;
 	char *end = ioStr;

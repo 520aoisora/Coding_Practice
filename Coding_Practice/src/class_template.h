@@ -27,11 +27,11 @@ public:
 
 	static ClassTemplate *CreateQuestionPointerOrNull(std::istream &iQuestionName);
 
-	virtual void RunRegression() = 0;
+	virtual void RunRegression() const = 0;
 
 protected:
 
-	virtual ClassTemplate *CreateSpecificQuestionPointer() = 0;
+	virtual ClassTemplate *CreateSpecificQuestionPointer() const = 0;
 
 private:
 

@@ -26,12 +26,12 @@ QuestionName C1Q3::question_name_ = "C1Q3";
 
 C1Q3 C1Q3::question_instance_(C1Q3::question_name_);
 
-ClassTemplate *C1Q3::CreateSpecificQuestionPointer()
+ClassTemplate *C1Q3::CreateSpecificQuestionPointer() const
 {
 	return new C1Q3();
 }
 
-bool C1Q3::isPermutation(const string &iStr1, const string &iStr2)
+bool C1Q3::isPermutation(const string &iStr1, const string &iStr2) const
 {
 	int str_length1 = iStr1.length();
 	int str_length2 = iStr2.length();
@@ -54,7 +54,7 @@ bool C1Q3::isPermutation(const string &iStr1, const string &iStr2)
 	return true;
 }
 	
-bool C1Q3::isPermutation_withQuickSort(string iStr1, string iStr2)
+bool C1Q3::isPermutation_withQuickSort(string iStr1, string iStr2) const
 {
 	int str_length1 = iStr1.length();
 	int str_length2 = iStr2.length();
@@ -72,7 +72,7 @@ bool C1Q3::isPermutation_withQuickSort(string iStr1, string iStr2)
 	return true;
 }
 
-void C1Q3::RunRegression()
+void C1Q3::RunRegression() const
 {
 	string str1[3];
 	str1[0] = "abcdefgh";

@@ -25,7 +25,7 @@ QuestionName C1Q7::question_name_ = "C1Q7";
 
 C1Q7 C1Q7::question_instance_(C1Q7::question_name_);
 
-ClassTemplate *C1Q7::CreateSpecificQuestionPointer()
+ClassTemplate *C1Q7::CreateSpecificQuestionPointer() const
 {
 	return new C1Q7();
 }
@@ -63,7 +63,7 @@ void C1Q7::setZeros(int ioMatrix[6][7]) const
 				ioMatrix[row][column] = 0;
 }
 
-void C1Q7::RunRegression()
+void C1Q7::RunRegression() const
 {
 	//int matrix[4][3][3] = {{{1,1,1},
 	//						{1,1,1},

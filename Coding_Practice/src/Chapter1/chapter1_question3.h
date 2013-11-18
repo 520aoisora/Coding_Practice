@@ -31,11 +31,11 @@ public:
 
 	C1Q3(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
 
-	void RunRegression();
+	void RunRegression() const;
 
 protected:
 
-	ClassTemplate *CreateSpecificQuestionPointer();
+	ClassTemplate *CreateSpecificQuestionPointer() const;
 
 private:
 
@@ -70,7 +70,7 @@ private:
 		@ Usage:
 		bool is_permutation = isPermutation("ABC","abc");
 	*/
-	bool isPermutation(const std::string &iStr1, const std::string &iStr2);
+	bool isPermutation(const std::string &iStr1, const std::string &iStr2) const;
 
 	/*
 		@ Description:
@@ -97,7 +97,7 @@ private:
 		@ Usage:
 		bool is_permutation = isPermutation("ABC","abc");
 	*/
-	bool isPermutation_withQuickSort(std::string iStr1, std::string iStr2);
+	bool isPermutation_withQuickSort(std::string iStr1, std::string iStr2) const;
 };
 
 #endif

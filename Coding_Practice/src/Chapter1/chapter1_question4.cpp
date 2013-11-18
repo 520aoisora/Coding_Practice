@@ -27,12 +27,12 @@ QuestionName C1Q4::question_name_ = "C1Q4";
 
 C1Q4 C1Q4::question_instance_(C1Q4::question_name_);
 
-ClassTemplate *C1Q4::CreateSpecificQuestionPointer()
+ClassTemplate *C1Q4::CreateSpecificQuestionPointer() const
 {
 	return new C1Q4();
 }
 
-bool C1Q4::replaceAllSpaces(string &ioStr, const int &iRealStringLength)
+bool C1Q4::replaceAllSpaces(string &ioStr, const int &iRealStringLength) const
 {
 	if (iRealStringLength <= 0)
 		return false;
@@ -63,7 +63,7 @@ bool C1Q4::replaceAllSpaces(string &ioStr, const int &iRealStringLength)
 	return true;
 }
 
-void C1Q4::RunRegression()
+void C1Q4::RunRegression() const
 {
 	string str[3];
 	str[0] = "abcdefgh";

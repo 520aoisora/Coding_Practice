@@ -30,11 +30,11 @@ public:
 
 	C1Q6(QuestionName iQuestionName) : ClassTemplate(iQuestionName) {};
 
-	void RunRegression();
+	void RunRegression() const;
 
 protected:
 
-	ClassTemplate *CreateSpecificQuestionPointer();
+	ClassTemplate *CreateSpecificQuestionPointer() const;
 
 private:
 
@@ -44,7 +44,7 @@ private:
 
 private:
 
-	bool areTwo5x5ArrayEqual(int matrix1[5][5], int matrix2[5][5]);
+	bool areTwo5x5ArrayEqual(int matrix1[5][5], int matrix2[5][5]) const;
 
 	/*
 		@ Description:
@@ -71,7 +71,7 @@ private:
 										{ 21, 22, 23, 24, 25 }};
 		rotate5x5Matrix(original_5x5_martix, 5);
 	*/
-	void rotate5x5Matrix(int ioMatrix[5][5], int N);
+	void rotate5x5Matrix(int ioMatrix[5][5], int N) const;
 };
 
 #endif
