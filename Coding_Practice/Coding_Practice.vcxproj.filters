@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Chapter1">
       <UniqueIdentifier>{a4f16bc5-46b8-4af8-887f-675cfe9198c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Chapter2">
+      <UniqueIdentifier>{e863e295-d174-43b8-9ec5-4485e3ceeeb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Chapter2">
+      <UniqueIdentifier>{3ee86b24-12c8-4032-ae62-1b68bd56599a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Chapter1\chapter1_question1.h">
@@ -44,6 +50,12 @@
     </ClInclude>
     <ClInclude Include="src\class_template.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Chapter2\node.h">
+      <Filter>Header Files\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Chapter2\chapter2_question1.h">
+      <Filter>Header Files\Chapter2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +85,12 @@
     </ClCompile>
     <ClCompile Include="src\class_template.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Chapter2\node.cpp">
+      <Filter>Source Files\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Chapter2\chapter2_question1.cpp">
+      <Filter>Source Files\Chapter2</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

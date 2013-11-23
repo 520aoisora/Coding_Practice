@@ -1,5 +1,5 @@
-#ifndef _CLASS_Template_H_
-#define _CLASS_Template_H_
+#ifndef _CLASS_TEMPLETE_H_
+#define _CLASS_TEMPLETE_H_
 
 // 1. Preferred location
 
