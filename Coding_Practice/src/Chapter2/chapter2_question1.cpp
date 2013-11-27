@@ -14,7 +14,6 @@
 
 // 3. C++ system files
 #include <algorithm>
-#include <unordered_map>
 #include <vector>
 
 // 4. Other libraries' .h files

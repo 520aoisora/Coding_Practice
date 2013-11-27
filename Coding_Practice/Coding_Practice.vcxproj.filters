@@ -57,6 +57,9 @@
     <ClInclude Include="src\Chapter2\chapter2_question1.h">
       <Filter>Header Files\Chapter2</Filter>
     </ClInclude>
+    <ClInclude Include="src\Chapter2\chapter2_question2.h">
+      <Filter>Header Files\Chapter2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Chapter1\chapter1_question1.cpp">
@@ -90,6 +93,9 @@
       <Filter>Source Files\Chapter2</Filter>
     </ClCompile>
     <ClCompile Include="src\Chapter2\chapter2_question1.cpp">
+      <Filter>Source Files\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Chapter2\chapter2_question2.cpp">
       <Filter>Source Files\Chapter2</Filter>
     </ClCompile>
   </ItemGroup>
