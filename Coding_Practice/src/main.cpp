@@ -1,12 +1,14 @@
+// 1. Preferred location
+#include "class_template.h"
+
+// 2. C system files
+
+// 3. C++ system files
 #include <iostream>
 
-#include "Chapter1/chapter1_question1.h"
-#include "Chapter1/chapter1_question2.h"
-#include "Chapter1/chapter1_question3.h"
-#include "Chapter1/chapter1_question4.h"
-#include "Chapter1/chapter1_question5.h"
-#include "Chapter1/chapter1_question6.h"
-#include "Chapter1/chapter1_question7.h"
+// 4. Other libraries' .h files
+
+// 5. Your project's .h files
 
 using namespace std;
 
