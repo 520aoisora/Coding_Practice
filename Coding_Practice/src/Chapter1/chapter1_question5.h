@@ -52,25 +52,25 @@ private:
 
 	/*
 		@ Description:
-		Compress a string and return the shorter one between the original and compressed string.
+			Compress a string and return the shorter one between the original and compressed string.
 
 		@ Algorithm:
-		Create a new compressed string by using "append" not "+= (very expensive)".
-		Compare the lengths of two strings and return the shorter one.
+			Create a new compressed string by using "append" not "+= (very expensive)".
+			Compare the lengths of two strings and return the shorter one.
 
-		Time efficiency: O(N)
-		Space efficiency: O(N)
+			Time efficiency: O(N)
+			Space efficiency: O(N)
 
 		@ Input:
-		ioStr: Input string including letters, digits and punctuation.
+			ioStr: Input string including letters, digits and punctuation.
 
 		@ Output:
-		bool: Return true if input string is valid.
-		ioStr: Returned shorter string. Either the original one or compressed one.
+			bool: Return true if input string is valid.
+			ioStr: Returned shorter string. Either the original one or compressed one.
 
 		@ Usage:
-		string test_string = "aabcccccaaa";
-		if(compressString(test_string));
+			string test_string = "aabcccccaaa";
+			if(compressString(test_string));
 	*/
 	bool compressString(std::string &ioStr) const;
 };

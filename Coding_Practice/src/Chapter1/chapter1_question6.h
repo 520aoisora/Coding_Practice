@@ -48,28 +48,28 @@ private:
 
 	/*
 		@ Description:
-		Rotate an integer 5x5 matrix by 90 degrees.
+			Rotate an integer 5x5 matrix by 90 degrees.
 
 		@ Algorithm:
-		By using a temporary value to rotate the whole matrix in place.
+			By using a temporary value to rotate the whole matrix in place.
 
 		Time efficiency: O(NxN)
-		Space efficiency: O(1)
+			Space efficiency: O(1)
 
 		@ Input:
-		ioMatrix: Input integer matrix, size 5 x 5.
-			   N: Size of the matrix. N = 5 all the time in this case.
+			ioMatrix: Input integer matrix, size 5 x 5.
+				   N: Size of the matrix. N = 5 all the time in this case.
 
 		@ Output:
-		ioMatrix: A 5 x 5 integer matrix rotated by 90 degrees.
+			ioMatrix: A 5 x 5 integer matrix rotated by 90 degrees.
 
 		@ Usage:
-		int original_5x5_martix[5][5] = {{ 1, 2, 3, 4, 5 },
-										{ 6, 7, 8, 9, 10 },
-										{ 11, 12, 13, 14, 15 },
-										{ 16, 17, 18, 19, 20 },
-										{ 21, 22, 23, 24, 25 }};
-		rotate5x5Matrix(original_5x5_martix, 5);
+			int original_5x5_martix[5][5] = {{ 1, 2, 3, 4, 5 },
+											{ 6, 7, 8, 9, 10 },
+											{ 11, 12, 13, 14, 15 },
+											{ 16, 17, 18, 19, 20 },
+											{ 21, 22, 23, 24, 25 }};
+			rotate5x5Matrix(original_5x5_martix, 5);
 	*/
 	void rotate5x5Matrix(int ioMatrix[5][5], int N) const;
 };

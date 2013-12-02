@@ -47,55 +47,55 @@ private:
 
 	/*
 		@ Description:
-		Check whether string1 is permutation of string2.
+			Check whether string1 is permutation of string2.
 
 		@ Algorithm:
-		This algorithm depends on the assumption that all characters in
-		the string are ASCII codes, case sensitive and whitespace is significant.
+			This algorithm depends on the assumption that all characters in
+			the string are ASCII codes, case sensitive and whitespace is significant.
 
-		Check if two strings have identical character counts.
-		If not, return false. Otherwise, return true.
+			Check if two strings have identical character counts.
+			If not, return false. Otherwise, return true.
 
-		Time efficiency: O(N)
-		Space efficiency: O(N)
+			Time efficiency: O(N)
+			Space efficiency: O(N)
 
 		@ Input:
-		iStr1: Input string including letters, digits and punctuation.
-		iStr2: Input string including letters, digits and punctuation.
+			iStr1: Input string including letters, digits and punctuation.
+			iStr2: Input string including letters, digits and punctuation.
 
 		@ Output:
-		bool: Return true if two strings have identical character counts.
-		Otherwise false.
+			bool: Return true if two strings have identical character counts.
+			Otherwise false.
 
 		@ Usage:
-		bool is_permutation = isPermutation("ABC","abc");
+			bool is_permutation = isPermutation("ABC","abc");
 	*/
 	bool isPermutation(const std::string &iStr1, const std::string &iStr2) const;
 
 	/*
 		@ Description:
-		Check whether string1 is permutation of string2.
+			Check whether string1 is permutation of string2.
 
 		@ Algorithm:
-		This algorithm depends on the assumption that all characters in
-		the string are ASCII codes, case sensitive and whitespace is significant.
+			This algorithm depends on the assumption that all characters in
+			the string are ASCII codes, case sensitive and whitespace is significant.
 
-		Sort two strings by using stl quick sort method.
-		Then compare the sorted versions of strings.
+			Sort two strings by using stl quick sort method.
+			Then compare the sorted versions of strings.
 
-		Time efficiency: O(N*log(N))
-		Space efficiency: O(1)
+			Time efficiency: O(N*log(N))
+			Space efficiency: O(1)
 
 		@ Input:
-		iStr1: Input string including letters, digits and punctuation.
-		iStr2: Input string including letters, digits and punctuation.
+			iStr1: Input string including letters, digits and punctuation.
+			iStr2: Input string including letters, digits and punctuation.
 
 		@ Output:
-		bool: Return true if two strings have identical character counts.
-		Otherwise false.
+			bool: Return true if two strings have identical character counts.
+			Otherwise false.
 
 		@ Usage:
-		bool is_permutation = isPermutation("ABC","abc");
+			bool is_permutation = isPermutation("ABC","abc");
 	*/
 	bool isPermutation_withQuickSort(std::string iStr1, std::string iStr2) const;
 };

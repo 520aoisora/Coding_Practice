@@ -48,29 +48,29 @@ private:
 
 	/*
 		@ Description:
-		Set whole row and column zero where there is a zero in a 6 x 7 matrix.
+			Set whole row and column zero where there is a zero in a 6 x 7 matrix.
 
 		@ Algorithm:
-		By using two 1D arrays to store which rows and columns to be set to zero to save memory.
+			By using two 1D arrays to store which rows and columns to be set to zero to save memory.
 
 		Time efficiency: O(MxN)
-		Space efficiency: O(1)
+			Space efficiency: O(1)
 
 		@ Input:
-		ioMatrix: Input integer matrix, size 6 x 7.
+			ioMatrix: Input integer matrix, size 6 x 7.
 
 		@ Output:
-		ioMatrix: A 6 x 7 integer matrix whose rows and columns are set to zero
+			ioMatrix: A 6 x 7 integer matrix whose rows and columns are set to zero
 				  based on the requirement.
 
 		@ Usage:
-		int original_6x7_matrix[6][7] = { { 1, 1, 1, 1, 1, 1, 1 },
-											{ 1, 1, 1, 1, 1, 1, 1 },
-											{ 1, 0, 1, 1, 1, 1, 1 },
-											{ 1, 1, 1, 1, 1, 1, 1 },
-											{ 1, 1, 1, 1, 1, 0, 1 },
-											{ 1, 1, 1, 1, 1, 1, 1 } };
-		setZeros(original_6x7_matrix);
+			int original_6x7_matrix[6][7] = { { 1, 1, 1, 1, 1, 1, 1 },
+												{ 1, 1, 1, 1, 1, 1, 1 },
+												{ 1, 0, 1, 1, 1, 1, 1 },
+												{ 1, 1, 1, 1, 1, 1, 1 },
+												{ 1, 1, 1, 1, 1, 0, 1 },
+												{ 1, 1, 1, 1, 1, 1, 1 } };
+			setZeros(original_6x7_matrix);
 	*/
 	void setZeros(int ioMatrix[6][7]) const;
 };

@@ -75,47 +75,47 @@ private:
 
 	/*
 		@ Description:
-		Check whether all characters in a string are unique.
+			Check whether all characters in a string are unique.
 
 		@ Algorithm:
-		This algorithm iterators every charactor in the string and
-		compare with all rest charactors by using double for loop.
+			This algorithm iterators every charactor in the string and
+			compare with all rest charactors by using double for loop.
 
-		Time efficiency: O(N*N)
-		Space efficiency: O(1)
+			Time efficiency: O(N*N)
+			Space efficiency: O(1)
 
 		@ Input:
-		iStr: Input string including letters, digits and punctuation.
+			iStr: Input string including letters, digits and punctuation.
 
 		@ Output:
-		bool: Return true if all characters in the string are unique.
+			bool: Return true if all characters in the string are unique.
 			  Otherwise false.
 
 		@ Usage:
-		bool are_all_characters_unique = areAllUniqueCharacters_doubleForLoop("ABC");
+			bool are_all_characters_unique = areAllUniqueCharacters_doubleForLoop("ABC");
 	*/
 	bool areAllUniqueCharacters_doubleForLoop(const std::string &iStr) const;
 
 	/*
 		@ Description:
-		Check whether all characters in a string are unique.
+			Check whether all characters in a string are unique.
 
 		@ Algorithm:
-		This algorithm sorts string at first by using quick sort.
-		Then compare every two adjacent letters and return false if they are same.
+			This algorithm sorts string at first by using quick sort.
+			Then compare every two adjacent letters and return false if they are same.
 
-		Time efficiency: O(N*log(N))
-		Space efficiency: O(N)
+			Time efficiency: O(N*log(N))
+			Space efficiency: O(N)
 
 		@ Input:
-		iStr: Input string including letters, digits and punctuation.
+			iStr: Input string including letters, digits and punctuation.
 
 		@ Output:
-		bool: Return true if all characters in the string are unique.
-		Otherwise false.
+			bool: Return true if all characters in the string are unique.
+			Otherwise false.
 
 		@ Usage:
-		bool are_all_characters_unique = areAllUniqueCharacters_withQuickSort("ABC");
+			bool are_all_characters_unique = areAllUniqueCharacters_withQuickSort("ABC");
 	*/
 	bool areAllUniqueCharacters_withQuickSort(std::string iStr) const;
 };

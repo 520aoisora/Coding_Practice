@@ -66,20 +66,20 @@ private:
 
 	/*
 		@ Description:
-		Remove all duplicate nodes in a linked list.
+			Remove all duplicate nodes in a linked list.
 
 		@ Algorithm:
-		This algorithm doesnot use any buffer to store charactors appearing
-		in the linked list to save memory.
+			This algorithm doesnot use any buffer to store charactors appearing
+			in the linked list to save memory.
 
-		Time efficiency: O(NxN)
-		Space efficiency: O(1)
+			Time efficiency: O(NxN)
+			Space efficiency: O(1)
 
 		@ Input:
-		iHeadNode: Pointer of first node in linked list.
+			iHeadNode: Pointer of first node in linked list.
 
 		@ Output:
-		No output.
+			No output.
 	*/
 	void removeDuplicates_withoutBuffer(Node *iHeadNode) const;
 };

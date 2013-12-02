@@ -48,29 +48,29 @@ private:
 
 	/*
 		@ Description:
-		Reverse all characters in char star string.
+			Reverse all characters in char star string.
 
 		@ Algorithm:
-		Find last character in the string.
-		Then swap characters and shift index until two indexes meet.
+			Find last character in the string.
+			Then swap characters and shift index until two indexes meet.
 
-		Create an array of boolean values, where the flag at index i
-		indicates whether character i in the alphabet is contained in
-		the string. If run across a character a second time, immediately
-		return false.
+			Create an array of boolean values, where the flag at index i
+			indicates whether character i in the alphabet is contained in
+			the string. If run across a character a second time, immediately
+			return false.
 
-		Time efficiency: O(N)
-		Space efficiency: O(1)
+			Time efficiency: O(N)
+			Space efficiency: O(1)
 
 		@ Input:
-		iStr: Input string including letters, digits and punctuation.
+			iStr: Input string including letters, digits and punctuation.
 
 		@ Output:
-		No return value. ioStr will be reverted.
+			No return value. ioStr will be reverted.
 
 		@ Usage:
-		char test_string[] = "Hello world!";
-		reverseCharStarString(test_string);
+			char test_string[] = "Hello world!";
+			reverseCharStarString(test_string);
 	*/
 	void reverseCharStarString(char *ioStr) const;
 };

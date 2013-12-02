@@ -67,46 +67,46 @@ private:
 
 	/*
 		@ Description:
-		Find kth to the last element of a singly linked list.
+			Find kth to the last element of a singly linked list.
 
 		@ Algorithm:
-		This algorithm iterate through the whole linked list recursively.
-		When it reaches the end, set counter to 0. When it is not the end,
-		add 1 to counter and compare to K. Return current node if counter is
-		equal to K.
+			This algorithm iterate through the whole linked list recursively.
+			When it reaches the end, set counter to 0. When it is not the end,
+			add 1 to counter and compare to K. Return current node if counter is
+			equal to K.
 
-		Time efficiency: O(N)
-		Space efficiency: O(N)
+			Time efficiency: O(N)
+			Space efficiency: O(N)
 
 		@ Input:
-		iHeadNode: Pointer of first node in linked list.
-		k: the number of the element which is searched.
+			iHeadNode: Pointer of first node in linked list.
+			k: the number of the element which is searched.
 
 		@ Output:
-		Node*: the pointer of the result node in the singly linked list.
+			Node*: the pointer of the result node in the singly linked list.
 	*/
 	Node* findKthToLastNode_recursive(Node *iHeadNode, const unsigned int &k) const;
 
 	/*
 		@ Description:
-		Find kth to the last element of a singly linked list.
+			Find kth to the last element of a singly linked list.
 
 		@ Algorithm:
-		This algorithm place two pointers k nodes apart by putting
-		first_node at the beginning and moving second_node k nodes
-		into the list. Then we move them at same pace. When second_node
-		hit the end of the linked list, first_node will be k nodes
-		from the end.
+			This algorithm place two pointers k nodes apart by putting
+			first_node at the beginning and moving second_node k nodes
+			into the list. Then we move them at same pace. When second_node
+			hit the end of the linked list, first_node will be k nodes
+			from the end.
 
-		Time efficiency: O(N)
-		Space efficiency: O(1)
+			Time efficiency: O(N)
+			Space efficiency: O(1)
 
 		@ Input:
-		iHeadNode: Pointer of first node in linked list.
-		k: the number of the element which is searched.
+			iHeadNode: Pointer of first node in linked list.
+			k: the number of the element which is searched.
 
 		@ Output:
-		Node*: the pointer of the result node in the singly linked list.
+			Node*: the pointer of the result node in the singly linked list.
 	*/
 	Node* findKthToLastNode_iterative(Node *iHeadNode, const unsigned int &k) const;
 };
