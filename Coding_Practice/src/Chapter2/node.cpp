@@ -30,6 +30,7 @@ void Node::append_to_tail(Node *iNode)
 	while (last_node->ptr_to_next_node_ != NULL)
 		last_node = last_node->ptr_to_next_node_;
 	last_node->ptr_to_next_node_ = iNode;
+	iNode->ptr_to_prev_node_ = last_node;
 }
 
 void Node::delete_all_nodes_behind()
@@ -44,4 +45,13 @@ void Node::delete_all_nodes_behind()
 		head_node_to_be_deleted = head_node_to_be_deleted->ptr_to_next_node_;
 		delete node_to_be_deleted;
 	}
+}
+
+int Node::calculate_linked_list_length()
+{
+	int linked_list_length = 1;
+	for (Node *next_node = this->ptr_to_next_node_; next_node != NULL; next_node = next_node->ptr_to_next_node_)
+		linked_list_length++;
+
+	return linked_list_length;
 }

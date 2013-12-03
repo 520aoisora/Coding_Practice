@@ -17,6 +17,7 @@ public:
 public:
 	void append_to_tail(Node *iNode);
 	void delete_all_nodes_behind();
+	int calculate_linked_list_length();
 
 public:
 	int int_value_ = 0;
