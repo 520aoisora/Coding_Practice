@@ -65,6 +65,17 @@ public:
 		return linked_list_length;
 	}
 
+	void display_all_nodes_values_from_current_node()
+	{
+		Node<T> *node_to_be_displayed = this;
+		while (node_to_be_displayed != NULL)
+		{
+			cout << node_to_be_displayed->value_ << " ";
+			node_to_be_displayed = node_to_be_displayed->ptr_to_next_node_;
+		}
+		cout << endl;
+	}
+
 public:
 	T value_;
 

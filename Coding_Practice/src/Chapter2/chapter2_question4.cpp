@@ -33,15 +33,11 @@ void C2Q4::RunRegression() const
 {
 	vector<int> aIntegerVector = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 	Node<int> *node_head = new Node<int>(aIntegerVector);
+
 	partitionLinkedList(node_head,5);
 
-	Node<int> *temp_node_ptr = node_head;
-	while (temp_node_ptr != NULL)
-	{
-		cout << temp_node_ptr->value_ << " ";
-		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
-	}
-	cout << endl;
+	node_head->display_all_nodes_values_from_current_node();
+
 	return;
 }
 

@@ -34,15 +34,11 @@ void C2Q3::RunRegression() const
 {
 	Node<char> *node_head = new Node<char>(string("FOLLOW UP"));
 	Node<char> *node_to_be_removed = node_head->ptr_to_next_node_;
+
 	removeNodeInLinkedList(node_to_be_removed);
 
-	Node<char> *temp_node_ptr = node_head;
-	while (temp_node_ptr != NULL)
-	{
-		cout << temp_node_ptr->value_;
-		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
-	}
-	cout << endl;
+	node_head->display_all_nodes_values_from_current_node();
+
 	return;
 }
 

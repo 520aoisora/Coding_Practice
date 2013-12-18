@@ -37,13 +37,8 @@ void C2Q1::RunRegression() const
 
 	removeDuplicates_withoutBuffer(node_head);
 
-	Node<char> *temp_node_ptr = node_head;
-	while (temp_node_ptr != NULL)
-	{
-		cout << temp_node_ptr->value_;
-		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
-	}
-	cout << endl;
+	node_head->display_all_nodes_values_from_current_node();
+
 	return;
 }
 

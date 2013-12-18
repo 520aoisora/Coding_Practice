@@ -44,23 +44,10 @@ void C2Q5::RunRegression() const
 	Node<int> *second_number_node_head = new Node<int>(second_number_vector);
 
 	Node<int> *result_head_node = addTwoReverseOrderNumbers(first_number_node_head, second_number_node_head);
-
-	Node<int> *temp_node_ptr = result_head_node;
-	while (temp_node_ptr != NULL)
-	{
-		cout << temp_node_ptr->value_;
-		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
-	}
-	cout << endl;
+	result_head_node->display_all_nodes_values_from_current_node();
 
 	result_head_node = addTwoForwardOrderNumbers(first_number_node_head, second_number_node_head);
-	temp_node_ptr = result_head_node;
-	while (temp_node_ptr != NULL)
-	{
-		cout << temp_node_ptr->value_;
-		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
-	}
-	cout << endl;
+	result_head_node->display_all_nodes_values_from_current_node();
 
 	return;
 }
