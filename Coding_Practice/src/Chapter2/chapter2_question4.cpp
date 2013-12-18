@@ -32,31 +32,31 @@ ClassTemplate *C2Q4::CreateSpecificQuestionPointer() const
 void C2Q4::RunRegression() const
 {
 	vector<int> aIntegerVector = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-	Node *node_head = new Node(aIntegerVector);
+	Node<int> *node_head = new Node<int>(aIntegerVector);
 	partitionLinkedList(node_head,5);
 
-	Node *temp_node_ptr = node_head;
+	Node<int> *temp_node_ptr = node_head;
 	while (temp_node_ptr != NULL)
 	{
-		cout << temp_node_ptr->int_value_ << " ";
+		cout << temp_node_ptr->value_ << " ";
 		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
 	}
 	cout << endl;
 	return;
 }
 
-void C2Q4::partitionLinkedList(Node *&iHeadNode, const int &x) const
+void C2Q4::partitionLinkedList(Node<int> *&iHeadNode, const int &x) const
 {
 	if (iHeadNode == NULL || iHeadNode->ptr_to_next_node_ == NULL)
 		return;
 
-	Node *smaller_partition_head = NULL;
-	Node *greater_partition_head = NULL;
-	for (Node *node_to_be_checked = iHeadNode; node_to_be_checked != NULL; node_to_be_checked = node_to_be_checked->ptr_to_next_node_)
+	Node<int> *smaller_partition_head = NULL;
+	Node<int> *greater_partition_head = NULL;
+	for (Node<int> *node_to_be_checked = iHeadNode; node_to_be_checked != NULL; node_to_be_checked = node_to_be_checked->ptr_to_next_node_)
 	{
-		Node *temp_node = new Node(node_to_be_checked->int_value_);
+		Node<int> *temp_node = new Node<int>(node_to_be_checked->value_);
 
-		if (temp_node->int_value_ < x)
+		if (temp_node->value_ < x)
 		{
 			if (smaller_partition_head == NULL)
 				smaller_partition_head = temp_node;
@@ -72,7 +72,7 @@ void C2Q4::partitionLinkedList(Node *&iHeadNode, const int &x) const
 		}
 	}
 
-	Node *last_node_of_smaller_partition = smaller_partition_head;
+	Node<int> *last_node_of_smaller_partition = smaller_partition_head;
 	while (last_node_of_smaller_partition->ptr_to_next_node_ != NULL)
 		last_node_of_smaller_partition = last_node_of_smaller_partition->ptr_to_next_node_;
 

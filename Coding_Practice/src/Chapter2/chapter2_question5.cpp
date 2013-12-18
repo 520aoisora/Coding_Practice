@@ -38,17 +38,17 @@ ClassTemplate *C2Q5::CreateSpecificQuestionPointer() const
 void C2Q5::RunRegression() const
 {
 	vector<int> first_number_vector = { 3, 2, 1};
-	Node *first_number_node_head = new Node(first_number_vector);
+	Node<int> *first_number_node_head = new Node<int>(first_number_vector);
 
 	vector<int> second_number_vector = { 2, 1 };
-	Node *second_number_node_head = new Node(second_number_vector);
+	Node<int> *second_number_node_head = new Node<int>(second_number_vector);
 
-	Node *result_head_node = addTwoReverseOrderNumbers(first_number_node_head, second_number_node_head);
+	Node<int> *result_head_node = addTwoReverseOrderNumbers(first_number_node_head, second_number_node_head);
 
-	Node *temp_node_ptr = result_head_node;
+	Node<int> *temp_node_ptr = result_head_node;
 	while (temp_node_ptr != NULL)
 	{
-		cout << temp_node_ptr->int_value_;
+		cout << temp_node_ptr->value_;
 		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
 	}
 	cout << endl;
@@ -57,7 +57,7 @@ void C2Q5::RunRegression() const
 	temp_node_ptr = result_head_node;
 	while (temp_node_ptr != NULL)
 	{
-		cout << temp_node_ptr->int_value_;
+		cout << temp_node_ptr->value_;
 		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
 	}
 	cout << endl;
@@ -65,9 +65,9 @@ void C2Q5::RunRegression() const
 	return;
 }
 
-Node* C2Q5::addTwoReverseOrderNumbers(Node *iHeadNodeOfFirstNumber, Node *iHeadNodeOfSecondNumber) const
+Node<int>* C2Q5::addTwoReverseOrderNumbers(Node<int> *iHeadNodeOfFirstNumber, Node<int> *iHeadNodeOfSecondNumber) const
 {
-	Node *result_head_node = NULL;
+	Node<int> *result_head_node = NULL;
 	int carry = 0;
 
 	while (iHeadNodeOfFirstNumber != NULL || iHeadNodeOfSecondNumber != NULL)
@@ -77,39 +77,39 @@ Node* C2Q5::addTwoReverseOrderNumbers(Node *iHeadNodeOfFirstNumber, Node *iHeadN
 
 		if (iHeadNodeOfFirstNumber != NULL)
 		{
-			first_digit = iHeadNodeOfFirstNumber->int_value_;
+			first_digit = iHeadNodeOfFirstNumber->value_;
 			iHeadNodeOfFirstNumber = iHeadNodeOfFirstNumber->ptr_to_next_node_;
 		}
 
 		if (iHeadNodeOfSecondNumber != NULL)
 		{
-			second_digit = iHeadNodeOfSecondNumber->int_value_;
+			second_digit = iHeadNodeOfSecondNumber->value_;
 			iHeadNodeOfSecondNumber = iHeadNodeOfSecondNumber->ptr_to_next_node_;
 		}
 
 		carry = (first_digit + second_digit + carry) / 10;
 
 		if (result_head_node == NULL)
-			result_head_node = new Node((first_digit + second_digit + carry) % 10);
+			result_head_node = new Node<int>((first_digit + second_digit + carry) % 10);
 		else
-			result_head_node->append_to_tail(new Node((first_digit + second_digit + carry) % 10));
+			result_head_node->append_to_tail(new Node<int>((first_digit + second_digit + carry) % 10));
 	}
 
 	return result_head_node;
 }
 
-Node* addTwoForwardOrderNumbersRecursively(int number_of_digits_first_longer_than_second,
-										   Node *iHeadNodeOfFirstNumber, 
-										   Node *iHeadNodOfSecondNumber, 
-										   int &carry)
+Node<int>* addTwoForwardOrderNumbersRecursively(int number_of_digits_first_longer_than_second,
+												Node<int> *iHeadNodeOfFirstNumber,
+												Node<int> *iHeadNodOfSecondNumber,
+												int &carry)
 {
 	int first_digit = 0;
 	int second_digit = 0;
-	Node *next_digit_node = NULL;
+	Node<int> *next_digit_node = NULL;
 
 	if (number_of_digits_first_longer_than_second > 0)
 	{
-		first_digit = iHeadNodeOfFirstNumber->int_value_;
+		first_digit = iHeadNodeOfFirstNumber->value_;
 		number_of_digits_first_longer_than_second--;
 		next_digit_node = addTwoForwardOrderNumbersRecursively(number_of_digits_first_longer_than_second, 
 															   iHeadNodeOfFirstNumber->ptr_to_next_node_, 
@@ -118,7 +118,7 @@ Node* addTwoForwardOrderNumbersRecursively(int number_of_digits_first_longer_tha
 	}
 	else if (number_of_digits_first_longer_than_second < 0)
 	{
-		second_digit = iHeadNodOfSecondNumber->int_value_;
+		second_digit = iHeadNodOfSecondNumber->value_;
 		number_of_digits_first_longer_than_second++;
 		next_digit_node = addTwoForwardOrderNumbersRecursively(number_of_digits_first_longer_than_second,
 															   iHeadNodeOfFirstNumber,
@@ -127,8 +127,8 @@ Node* addTwoForwardOrderNumbersRecursively(int number_of_digits_first_longer_tha
 	}
 	else
 	{
-		first_digit = iHeadNodeOfFirstNumber->int_value_;
-		second_digit = iHeadNodOfSecondNumber->int_value_;
+		first_digit = iHeadNodeOfFirstNumber->value_;
+		second_digit = iHeadNodOfSecondNumber->value_;
 		if (iHeadNodeOfFirstNumber->ptr_to_next_node_ != NULL)
 		{
 			next_digit_node = addTwoForwardOrderNumbersRecursively(number_of_digits_first_longer_than_second,
@@ -139,19 +139,19 @@ Node* addTwoForwardOrderNumbersRecursively(int number_of_digits_first_longer_tha
 		else
 		{
 			carry = (first_digit + second_digit) / 10;
-			return new Node((first_digit + second_digit) % 10);
+			return new Node<int>((first_digit + second_digit) % 10);
 		}
 	}
 
 	carry = (first_digit + second_digit) / 10;
-	Node *current_digit_node = new Node((first_digit + second_digit) % 10);
+	Node<int> *current_digit_node = new Node<int>((first_digit + second_digit) % 10);
 	current_digit_node->ptr_to_next_node_ = next_digit_node;
 	return current_digit_node;
 }
 
-Node* C2Q5::addTwoForwardOrderNumbers(Node *iHeadNodeOfFirstNumber, Node *iHeadNodeOfSecondNumber) const
+Node<int>* C2Q5::addTwoForwardOrderNumbers(Node<int> *iHeadNodeOfFirstNumber, Node<int> *iHeadNodeOfSecondNumber) const
 {
-	Node *result_head_node = NULL;
+	Node<int> *result_head_node = NULL;
 	int carry = 0;
 
 	return addTwoForwardOrderNumbersRecursively((iHeadNodeOfFirstNumber->calculate_linked_list_length() - iHeadNodeOfSecondNumber->calculate_linked_list_length()),

@@ -92,7 +92,6 @@
     <ClCompile Include="src\Chapter2\chapter2_question3.cpp" />
     <ClCompile Include="src\Chapter2\chapter2_question4.cpp" />
     <ClCompile Include="src\Chapter2\chapter2_question5.cpp" />
-    <ClCompile Include="src\Chapter2\node.cpp" />
     <ClCompile Include="src\class_template.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>

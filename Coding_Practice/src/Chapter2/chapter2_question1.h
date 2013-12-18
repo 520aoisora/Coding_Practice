@@ -62,7 +62,7 @@ private:
 		@ Output:
 			No output.
 	*/
-	void removeDuplicates(Node *iHeadNode) const;
+	void removeDuplicates(Node<char> *iHeadNode) const;
 
 	/*
 		@ Description:
@@ -81,7 +81,7 @@ private:
 		@ Output:
 			No output.
 	*/
-	void removeDuplicates_withoutBuffer(Node *iHeadNode) const;
+	void removeDuplicates_withoutBuffer(Node<char> *iHeadNode) const;
 };
 
 #endif

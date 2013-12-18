@@ -4,29 +4,72 @@
 #include <iostream>
 #include <vector>
 
+template<typename T>
 class Node
 {
 public:
-	Node(const int &iValue) : int_value_(iValue) {};
-	Node(const double &iValue) : double_value_(iValue) {};
-	Node(const char &iValue) : char_value_(iValue) {};
-	Node(const bool &iValue) : bool_value_(iValue) {};
-	Node(const std::string &iString);
-	Node(const std::vector<int> &iIntegerVector);
+	Node(const T &iValue) : value_(iValue) {};
+
+	Node(const std::string &iString)
+	{
+		if (iString.length() == 0)
+			return;
+
+		this->value_ = iString[0];
+
+		for (unsigned int index = 1; index < iString.length(); index++)
+			this->append_to_tail(new Node<char>(iString[index]));
+	}
+
+	Node(const std::vector<int> &iIntegerVector)
+	{
+		if (iIntegerVector.size() == 0)
+			return;
+		
+		this->value_ = iIntegerVector[0];
+		
+		for (unsigned int index = 1; index < iIntegerVector.size(); index++)
+			this->append_to_tail(new Node<int>(iIntegerVector[index]));
+	}
 
 public:
-	void append_to_tail(Node *iNode);
-	void delete_all_nodes_behind();
-	int calculate_linked_list_length();
+	void append_to_tail(Node<T> *iNode)
+	{
+		Node<T> *last_node = this;
+		while (last_node->ptr_to_next_node_ != NULL)
+			last_node = last_node->ptr_to_next_node_;
+		last_node->ptr_to_next_node_ = iNode;
+		iNode->ptr_to_prev_node_ = last_node;
+	}
+
+	void delete_all_nodes_behind()
+	{
+		Node<T> *head_node_to_be_deleted = this->ptr_to_next_node_;
+		this->ptr_to_next_node_ = NULL;
+
+		for (Node<T> *node_to_be_deleted = head_node_to_be_deleted;
+			head_node_to_be_deleted != NULL;
+			node_to_be_deleted = head_node_to_be_deleted)
+		{
+			head_node_to_be_deleted = head_node_to_be_deleted->ptr_to_next_node_;
+			delete node_to_be_deleted;
+		}
+	}
+
+	int calculate_linked_list_length()
+	{
+		int linked_list_length = 1;
+		for (Node<T> *next_node = this->ptr_to_next_node_; next_node != NULL; next_node = next_node->ptr_to_next_node_)
+			linked_list_length++;
+		
+		return linked_list_length;
+	}
 
 public:
-	int int_value_ = 0;
-	double double_value_ = 0;
-	char char_value_ = '\0';
-	bool bool_value_ = false;
+	T value_;
 
-	Node *ptr_to_next_node_ = NULL;
-	Node *ptr_to_prev_node_ = NULL;
+	Node<T> *ptr_to_next_node_ = NULL;
+	Node<T> *ptr_to_prev_node_ = NULL;
 };
 
 #endif

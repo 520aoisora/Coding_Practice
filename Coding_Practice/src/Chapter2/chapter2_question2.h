@@ -63,7 +63,7 @@ private:
 		@ Output:
 			Node*: the pointer of the result node in the singly linked list.
 	*/
-	Node* findKthToLastNode(Node *iHeadNode, const unsigned int &k) const;
+	Node<char>* findKthToLastNode(Node<char> *iHeadNode, const unsigned int &k) const;
 
 	/*
 		@ Description:
@@ -85,7 +85,7 @@ private:
 		@ Output:
 			Node*: the pointer of the result node in the singly linked list.
 	*/
-	Node* findKthToLastNode_recursive(Node *iHeadNode, const unsigned int &k) const;
+	Node<char>* findKthToLastNode_recursive(Node<char> *iHeadNode, const unsigned int &k) const;
 
 	/*
 		@ Description:
@@ -108,7 +108,7 @@ private:
 		@ Output:
 			Node*: the pointer of the result node in the singly linked list.
 	*/
-	Node* findKthToLastNode_iterative(Node *iHeadNode, const unsigned int &k) const;
+	Node<char>* findKthToLastNode_iterative(Node<char> *iHeadNode, const unsigned int &k) const;
 };
 
 #endif

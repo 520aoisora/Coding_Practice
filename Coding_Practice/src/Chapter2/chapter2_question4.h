@@ -68,7 +68,7 @@ private:
 		@ Note:
 			The pointer must be passed by reference.
 	*/
-	void partitionLinkedList(Node *&iHeadNode, const int &x) const;
+	void partitionLinkedList(Node<int> *&iHeadNode, const int &x) const;
 };
 
 #endif

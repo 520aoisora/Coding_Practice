@@ -69,7 +69,7 @@ private:
 		@ Output:
 			Pointer of first node in the linked list of result.
 	*/
-	Node* addTwoReverseOrderNumbers(Node *iHeadNodeOfFirstNumber, Node *iHeadNodeOfSecondNumber) const;
+	Node<int>* addTwoReverseOrderNumbers(Node<int> *iHeadNodeOfFirstNumber, Node<int> *iHeadNodeOfSecondNumber) const;
 
 	/*
 		@ Description:
@@ -90,7 +90,7 @@ private:
 		@ Output:
 			Pointer of first node in the linked list of result.
 	*/
-	Node* addTwoForwardOrderNumbers(Node *iHeadNodeOfFirstNumber, Node *iHeadNodeOfSecondNumber) const;
+	Node<int>* addTwoForwardOrderNumbers(Node<int> *iHeadNodeOfFirstNumber, Node<int> *iHeadNodeOfSecondNumber) const;
 };
 
 #endif

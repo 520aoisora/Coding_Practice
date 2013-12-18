@@ -98,9 +98,6 @@
     <ClCompile Include="src\class_template.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Chapter2\node.cpp">
-      <Filter>Source Files\Chapter2</Filter>
-    </ClCompile>
     <ClCompile Include="src\Chapter2\chapter2_question1.cpp">
       <Filter>Source Files\Chapter2</Filter>
     </ClCompile>

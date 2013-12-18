@@ -32,28 +32,28 @@ ClassTemplate *C2Q3::CreateSpecificQuestionPointer() const
 
 void C2Q3::RunRegression() const
 {
-	Node *node_head = new Node(string("FOLLOW UP"));
-	Node *node_to_be_removed = node_head->ptr_to_next_node_;
+	Node<char> *node_head = new Node<char>(string("FOLLOW UP"));
+	Node<char> *node_to_be_removed = node_head->ptr_to_next_node_;
 	removeNodeInLinkedList(node_to_be_removed);
 
-	Node *temp_node_ptr = node_head;
+	Node<char> *temp_node_ptr = node_head;
 	while (temp_node_ptr != NULL)
 	{
-		cout << temp_node_ptr->char_value_;
+		cout << temp_node_ptr->value_;
 		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
 	}
 	cout << endl;
 	return;
 }
 
-void C2Q3::removeNodeInLinkedList(Node *iNode) const
+void C2Q3::removeNodeInLinkedList(Node<char> *iNode) const
 {
 	if (iNode == NULL || iNode->ptr_to_next_node_ == NULL)
 		return;
 
-	Node *node_to_be_removed = iNode->ptr_to_next_node_;
+	Node<char> *node_to_be_removed = iNode->ptr_to_next_node_;
 
-	iNode->char_value_ = node_to_be_removed->char_value_;
+	iNode->value_ = node_to_be_removed->value_;
 	iNode->ptr_to_next_node_ = node_to_be_removed->ptr_to_next_node_;
 
 	delete node_to_be_removed;

@@ -66,7 +66,7 @@ private:
 		@ Note:
 			The given node cannot be NULL or the last node in the linked list.
 	*/
-	void removeNodeInLinkedList(Node *iNode) const;
+	void removeNodeInLinkedList(Node<char> *iNode) const;
 };
 
 #endif

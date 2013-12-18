@@ -30,31 +30,31 @@ ClassTemplate *C2Q2::CreateSpecificQuestionPointer() const
 
 void C2Q2::RunRegression() const
 {
-	Node *node_head = new Node(string("FOLLOW UP"));
+	Node<char> *node_head = new Node<char>(string("FOLLOW UP"));
 
 	for (unsigned int k = 1; k <= string("FOLLOW UP").length(); k++)
-		cout << findKthToLastNode_iterative(node_head, k)->char_value_ << endl;
+		cout << findKthToLastNode_iterative(node_head, k)->value_ << endl;
 
 	return;
 }
 
-Node* C2Q2::findKthToLastNode(Node *iHeadNode, const unsigned int &k) const
+Node<char>* C2Q2::findKthToLastNode(Node<char> *iHeadNode, const unsigned int &k) const
 {
 	unsigned int linked_list_length = 0;
 	
-	for (Node *temp = iHeadNode; temp != NULL; temp = temp->ptr_to_next_node_)
+	for (Node<char> *temp = iHeadNode; temp != NULL; temp = temp->ptr_to_next_node_)
 		linked_list_length++;
 
 	if (k >= linked_list_length)
 		return iHeadNode;
 
-	Node *temp = iHeadNode;
+	Node<char> *temp = iHeadNode;
 	for (unsigned int index = 0; index < linked_list_length - k; temp = temp->ptr_to_next_node_, index++);
 
 	return temp;
 }
 
-Node* KthToLastNode(Node *iHeadNode, const unsigned int &k, unsigned int &counter)
+Node<char>* KthToLastNode(Node<char> *iHeadNode, const unsigned int &k, unsigned int &counter)
 {
 	if (iHeadNode == NULL)
 	{
@@ -62,7 +62,7 @@ Node* KthToLastNode(Node *iHeadNode, const unsigned int &k, unsigned int &counte
 		return NULL;
 	}
 
-	Node *temp_node = KthToLastNode(iHeadNode->ptr_to_next_node_, k, counter);
+	Node<char> *temp_node = KthToLastNode(iHeadNode->ptr_to_next_node_, k, counter);
 
 	if (k == ++counter)
 		return iHeadNode;
@@ -70,16 +70,16 @@ Node* KthToLastNode(Node *iHeadNode, const unsigned int &k, unsigned int &counte
 		return temp_node;
 }
 
-Node* C2Q2::findKthToLastNode_recursive(Node *iHeadNode, const unsigned int &k) const
+Node<char>* C2Q2::findKthToLastNode_recursive(Node<char> *iHeadNode, const unsigned int &k) const
 {
 	unsigned int tmp_int = 0;
 	return KthToLastNode(iHeadNode, k, tmp_int);
 }
 
-Node* C2Q2::findKthToLastNode_iterative(Node *iHeadNode, const unsigned int &k) const
+Node<char>* C2Q2::findKthToLastNode_iterative(Node<char> *iHeadNode, const unsigned int &k) const
 {
-	Node *first_node = iHeadNode;
-	Node *second_node = iHeadNode;
+	Node<char> *first_node = iHeadNode;
+	Node<char> *second_node = iHeadNode;
 
 	for (unsigned int index = 1; (index < k) && (second_node != NULL); index++)
 		second_node = second_node->ptr_to_next_node_;

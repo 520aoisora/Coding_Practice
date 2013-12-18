@@ -33,50 +33,49 @@ ClassTemplate *C2Q1::CreateSpecificQuestionPointer() const
 
 void C2Q1::RunRegression() const
 {
-	Node *node_head = new Node(string("FOLLOW UP"));
+	Node<char> *node_head = new Node<char>(string("FOLLOW UP"));
 
 	removeDuplicates_withoutBuffer(node_head);
 
-	Node *temp_node_ptr = node_head;
+	Node<char> *temp_node_ptr = node_head;
 	while (temp_node_ptr != NULL)
 	{
-		cout << temp_node_ptr->char_value_;
+		cout << temp_node_ptr->value_;
 		temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
 	}
 	cout << endl;
 	return;
 }
 
-void C2Q1::removeDuplicates(Node *iHeadNode) const
+void C2Q1::removeDuplicates(Node<char> *iHeadNode) const
 {
-	Node *temp_node_ptr = iHeadNode;
+	Node<char> *temp_node_ptr = iHeadNode;
 	vector<char> charactor_set;
-	charactor_set.push_back(temp_node_ptr->char_value_);
+	charactor_set.push_back(temp_node_ptr->value_);
 
 	while (temp_node_ptr->ptr_to_next_node_ != NULL)
 	{
-		if (find(charactor_set.begin(), charactor_set.end(), temp_node_ptr->ptr_to_next_node_->char_value_) == charactor_set.end())
+		if (find(charactor_set.begin(), charactor_set.end(), temp_node_ptr->ptr_to_next_node_->value_) == charactor_set.end())
 		{
-			charactor_set.push_back(temp_node_ptr->ptr_to_next_node_->char_value_);
+			charactor_set.push_back(temp_node_ptr->ptr_to_next_node_->value_);
 			temp_node_ptr = temp_node_ptr->ptr_to_next_node_;
 		}
 		else
 			temp_node_ptr->ptr_to_next_node_ = temp_node_ptr->ptr_to_next_node_->ptr_to_next_node_;
-
 	}
 }
 
-void C2Q1::removeDuplicates_withoutBuffer(Node *iHeadNode) const
+void C2Q1::removeDuplicates_withoutBuffer(Node<char> *iHeadNode) const
 {
-	Node *first_compare_node = iHeadNode;
+	Node<char> *first_compare_node = iHeadNode;
 	while ((first_compare_node != NULL) &&
 		   (first_compare_node->ptr_to_next_node_ != NULL))
 	{
-		Node *second_compare_node = first_compare_node;
+		Node<char> *second_compare_node = first_compare_node;
 
 		while (second_compare_node->ptr_to_next_node_ != NULL)
 		{
-			if (first_compare_node->char_value_ != second_compare_node->ptr_to_next_node_->char_value_)
+			if (first_compare_node->value_ != second_compare_node->ptr_to_next_node_->value_)
 				second_compare_node = second_compare_node->ptr_to_next_node_;
 			else
 				second_compare_node->ptr_to_next_node_ = second_compare_node->ptr_to_next_node_->ptr_to_next_node_;
