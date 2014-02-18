@@ -76,6 +76,32 @@ public:
 		cout << endl;
 	}
 
+	Node<T>* get_ptr_of_last_node()
+	{
+		Node<T> *last_node = this;
+		while (last_node->ptr_to_next_node_ != NULL)
+			last_node = last_node->ptr_to_next_node_;
+
+		return last_node;
+	}
+
+	Node<T>* get_ptr_of_starting_node_of_linked_list_second_half()
+	{
+		Node<T> *slow_runner = this;
+		Node<T> *fast_runner = this;
+
+		while ((fast_runner != NULL) && (fast_runner->ptr_to_next_node_ != NULL))
+		{
+			slow_runner = slow_runner->ptr_to_next_node_;
+			fast_runner = fast_runner->ptr_to_next_node_->ptr_to_next_node_;
+		}
+
+		if (fast_runner == NULL)
+			return slow_runner;
+		else
+			return slow_runner->ptr_to_next_node_;
+	}
+
 public:
 	T value_;
 

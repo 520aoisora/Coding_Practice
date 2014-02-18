@@ -38,6 +38,10 @@ void C1Q2::RunRegression() const
 
 	cout << str << endl;
 
+	reverseCharStarString_withReverse(str);
+
+	cout << str << endl;
+
 	return;
 }
 
@@ -59,5 +63,16 @@ void C1Q2::reverseCharStarString(char *ioStr) const
 
 	for(; begin < end; begin++, end--)
 		swapTwoCharacters(begin, end);
+}
+
+void C1Q2::reverseCharStarString_withReverse(char *ioStr) const
+{
+	char *begin = ioStr;
+	char *end = ioStr;
+
+	while (*end != NULL)
+		end++;
+
+	reverse(begin, end);
 }
 

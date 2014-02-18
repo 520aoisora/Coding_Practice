@@ -54,11 +54,6 @@ private:
 			Find last character in the string.
 			Then swap characters and shift index until two indexes meet.
 
-			Create an array of boolean values, where the flag at index i
-			indicates whether character i in the alphabet is contained in
-			the string. If run across a character a second time, immediately
-			return false.
-
 			Time efficiency: O(N)
 			Space efficiency: O(1)
 
@@ -73,6 +68,29 @@ private:
 			reverseCharStarString(test_string);
 	*/
 	void reverseCharStarString(char *ioStr) const;
+
+	/*
+		@ Description:
+		Reverse all characters in char star string.
+
+		@ Algorithm:
+		Find "begin" and "end" of char star string.
+		Then use std::reverse to reverse the string.
+
+		Time efficiency: O(N)
+		Space efficiency: O(1)
+
+		@ Input:
+		iStr: Input string including letters, digits and punctuation.
+
+		@ Output:
+		No return value. ioStr will be reverted.
+
+		@ Usage:
+		char test_string[] = "Hello world!";
+		reverseCharStarString_withReverse(test_string);
+	*/
+	void reverseCharStarString_withReverse(char *ioStr) const;
 };
 
 #endif

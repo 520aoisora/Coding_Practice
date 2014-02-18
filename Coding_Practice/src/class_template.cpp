@@ -16,7 +16,7 @@ ClassTemplate::ClassTemplate(QuestionName iQuestionName)
 	get_questionName_questionPointer_map()[iQuestionName] = this;
 }
 
-// This function is supter important !!!!
+// This function is super important !!!!
 // More information can be found through this link
 // http://stackoverflow.com/questions/19747920/access-violation-reading-location-0x000000004
 map<QuestionName, ClassTemplate *>& ClassTemplate::get_questionName_questionPointer_map()
